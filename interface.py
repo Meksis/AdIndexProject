@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.figure_factory as ff
 
 
+
 st.set_page_config(layout="wide", initial_sidebar_state='collapsed') # установка широкого расположения объектов
 
 

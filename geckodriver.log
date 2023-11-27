@@ -44,9 +44,14 @@ JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
 JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
 JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
 JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
-1701111332454	geckodriver	INFO	Listening on 127.0.0.1:60330
-1701111335448	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60331" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileXqzIry"
-console.warn: services.settings: Ignoring preference override of remote settings server
+JavaScript warning: https://top-fwz1.mail.ru/js/code.js, line 5: Script terminated by timeout at:
+w@https://top-fwz1.mail.ru/js/code.js:5:148
+e@https://top-fwz1.mail.ru/js/code.js:44:1
+b@https://top-fwz1.mail.ru/js/code.js:43:388
+
+1701111710273	Marionette	INFO	Stopped listening on port 59470
+Dynamically enable window occlusion 1
+nsole.warn: services.settings: Ignoring preference override of remote settings server
 console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
 1701111335733	Marionette	INFO	Marionette enabled
 Dynamically enable window occlusion 0
@@ -60,3 +65,657 @@ JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window
 JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
 JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 1701111365887	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://top-fwz1.mail.ru/js/code.js, line 43: Script terminated by timeout at:
+b@https://top-fwz1.mail.ru/js/code.js:43:393
+
+1701111864329	Marionette	INFO	Stopped listening on port 60340
+Dynamically enable window occlusion 1
+no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileExPcuW"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701111735286	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701111735356	Marionette	INFO	Listening on port 60587
+WebDriver BiDi listening on ws://127.0.0.1:60567
+Read port: 60587
+1701111735478	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60567/devtools/browser/47041cbc-803e-4313-99a4-b9484da2e1f5
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701111767505	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://top-fwz1.mail.ru/js/code.js, line 5: Script terminated by timeout at:
+w@https://top-fwz1.mail.ru/js/code.js:5:148
+e@https://top-fwz1.mail.ru/js/code.js:44:1
+b@https://top-fwz1.mail.ru/js/code.js:43:388
+
+1701111867302	Marionette	INFO	Stopped listening on port 60587
+Dynamically enable window occlusion 1
+1701111958161	geckodriver	INFO	Listening on 127.0.0.1:60766
+1701111961158	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60767" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileFH1eDa"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701111961485	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701111961541	Marionette	INFO	Listening on port 60775
+WebDriver BiDi listening on ws://127.0.0.1:60767
+Read port: 60775
+1701111961662	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60767/devtools/browser/e3ebfd8c-11e7-412f-b23f-473abf5e5eb7
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://top-fwz1.mail.ru/js/code.js, line 5: Script terminated by timeout at:
+w@https://top-fwz1.mail.ru/js/code.js:5:148
+e@https://top-fwz1.mail.ru/js/code.js:44:1
+b@https://top-fwz1.mail.ru/js/code.js:43:388
+
+1701111970441	Marionette	INFO	Stopped listening on port 60775
+Dynamically enable window occlusion 1
+1701111997400	geckodriver	INFO	Listening on 127.0.0.1:60855
+1701112000399	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60856" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileuKuFWm"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701112000680	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701112000745	Marionette	INFO	Listening on port 60867
+WebDriver BiDi listening on ws://127.0.0.1:60856
+Read port: 60867
+1701112000897	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60856/devtools/browser/aa0267cc-53d0-4e05-a545-9e4a88769156
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701112003256	Marionette	INFO	Stopped listening on port 60867
+Dynamically enable window occlusion 1
+1701112038121	geckodriver	INFO	Listening on 127.0.0.1:60992
+1701112041123	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60993" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileprdELu"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701112041406	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701112041496	Marionette	INFO	Listening on port 61004
+WebDriver BiDi listening on ws://127.0.0.1:60993
+Read port: 61004
+1701112041645	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60993/devtools/browser/a00af4e3-173e-409a-a7ce-3de8d6f01bf2
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701112044210	Marionette	INFO	Stopped listening on port 61004
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=B0PXnAZOg9175dtPm_TTI1lGBgX6N39jxoiiMNpcf48VBZLFSw4LyHkMXZKw1Fs_q9-574injZcou4KF-j_m5g, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=B0PXnAZOg9175dtPm_TTI1lGBgX6N39jxoiiMNpcf48VBZLFSw4LyHkMXZKw1Fs_q9-574injZcou4KF-j_m5g:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=B0PXnAZOg9175dtPm_TTI1lGBgX6N39jxoiiMNpcf48VBZLFSw4LyHkMXZKw1Fs_q9-574injZcou4KF-j_m5g:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=B0PXnAZOg9175dtPm_TTI1lGBgX6N39jxoiiMNpcf48VBZLFSw4LyHkMXZKw1Fs_q9-574injZcou4KF-j_m5g:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=B0PXnAZOg9175dtPm_TTI1lGBgX6N39jxoiiMNpcf48VBZLFSw4LyHkMXZKw1Fs_q9-574injZcou4KF-j_m5g:323:21
+
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/actors/ContentMetaChild.sys.mjs, line 179: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1701112078544	geckodriver	INFO	Listening on 127.0.0.1:61070
+1701112081543	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61071" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileFLgIpk"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701112081829	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701112081886	Marionette	INFO	Listening on port 61078
+WebDriver BiDi listening on ws://127.0.0.1:61071
+Read port: 61078
+1701112082026	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61071/devtools/browser/3c9ec559-1853-4257-9375-72e8d6ff1467
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701112084554	Marionette	INFO	Stopped listening on port 61078
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kqYDEmPd_4Tf9ySuXsUH_IRCyx84DMz5e6xQAhtFlHHPIvSoEjiw01qBUOXrcVWapIAqXb8jKReWHPQcs_9JVg, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kqYDEmPd_4Tf9ySuXsUH_IRCyx84DMz5e6xQAhtFlHHPIvSoEjiw01qBUOXrcVWapIAqXb8jKReWHPQcs_9JVg:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kqYDEmPd_4Tf9ySuXsUH_IRCyx84DMz5e6xQAhtFlHHPIvSoEjiw01qBUOXrcVWapIAqXb8jKReWHPQcs_9JVg:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kqYDEmPd_4Tf9ySuXsUH_IRCyx84DMz5e6xQAhtFlHHPIvSoEjiw01qBUOXrcVWapIAqXb8jKReWHPQcs_9JVg:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kqYDEmPd_4Tf9ySuXsUH_IRCyx84DMz5e6xQAhtFlHHPIvSoEjiw01qBUOXrcVWapIAqXb8jKReWHPQcs_9JVg:323:21
+
+Dynamically enable window occlusion 1
+1701112314492	geckodriver	INFO	Listening on 127.0.0.1:61180
+1701112317490	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61181" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofilelthOag"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701112317779	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701112317837	Marionette	INFO	Listening on port 61188
+WebDriver BiDi listening on ws://127.0.0.1:61181
+Read port: 61188
+1701112317971	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61181/devtools/browser/f303f5c3-de41-4e09-b7bc-3b78187580c8
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701112320579	Marionette	INFO	Stopped listening on port 61188
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-SAA-kMwxQOxzEtTRTIcd3Eodfb2Qe3aPs0WVlirL4zpwGwxTrZMRHdw11rax-yhzByhCzHONipM6ssnsOU_cQ, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-SAA-kMwxQOxzEtTRTIcd3Eodfb2Qe3aPs0WVlirL4zpwGwxTrZMRHdw11rax-yhzByhCzHONipM6ssnsOU_cQ:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-SAA-kMwxQOxzEtTRTIcd3Eodfb2Qe3aPs0WVlirL4zpwGwxTrZMRHdw11rax-yhzByhCzHONipM6ssnsOU_cQ:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-SAA-kMwxQOxzEtTRTIcd3Eodfb2Qe3aPs0WVlirL4zpwGwxTrZMRHdw11rax-yhzByhCzHONipM6ssnsOU_cQ:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-SAA-kMwxQOxzEtTRTIcd3Eodfb2Qe3aPs0WVlirL4zpwGwxTrZMRHdw11rax-yhzByhCzHONipM6ssnsOU_cQ:323:21
+
+Dynamically enable window occlusion 1
+1701112402900	geckodriver	INFO	Listening on 127.0.0.1:61255
+1701112405902	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61256" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofile0IeLEb"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701112406191	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701112406249	Marionette	INFO	Listening on port 61264
+WebDriver BiDi listening on ws://127.0.0.1:61256
+Read port: 61264
+1701112406373	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61256/devtools/browser/7479976b-1635-47b5-967f-8e11af5f4c51
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701112409118	Marionette	INFO	Stopped listening on port 61264
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=xkQVd-DI9wpewTGs3BOblpHbfj3qEwgtv_Eg6LGpsVp4vWDFHUUXyEdlg5X7SMEx4gmVVPCB2ed2jwJMSYtVmg, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=xkQVd-DI9wpewTGs3BOblpHbfj3qEwgtv_Eg6LGpsVp4vWDFHUUXyEdlg5X7SMEx4gmVVPCB2ed2jwJMSYtVmg:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=xkQVd-DI9wpewTGs3BOblpHbfj3qEwgtv_Eg6LGpsVp4vWDFHUUXyEdlg5X7SMEx4gmVVPCB2ed2jwJMSYtVmg:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=xkQVd-DI9wpewTGs3BOblpHbfj3qEwgtv_Eg6LGpsVp4vWDFHUUXyEdlg5X7SMEx4gmVVPCB2ed2jwJMSYtVmg:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=xkQVd-DI9wpewTGs3BOblpHbfj3qEwgtv_Eg6LGpsVp4vWDFHUUXyEdlg5X7SMEx4gmVVPCB2ed2jwJMSYtVmg:323:21
+
+Dynamically enable window occlusion 1
+1701112483232	geckodriver	INFO	Listening on 127.0.0.1:61396
+1701112486232	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61397" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofiledHG19x"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701112486535	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701112486595	Marionette	INFO	Listening on port 61404
+WebDriver BiDi listening on ws://127.0.0.1:61397
+Read port: 61404
+1701112486724	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61397/devtools/browser/dfa6a75a-7835-4f4d-9757-68fefbd17031
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701112489768	Marionette	INFO	Stopped listening on port 61404
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yZR8BSL9KNobLv3mGAS5nETroLcyE5y645WGdRbQp8JA-rOYURokVJ2hgVSJWlaaSTSZAFTsZR_P-cmUhRiCbA, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yZR8BSL9KNobLv3mGAS5nETroLcyE5y645WGdRbQp8JA-rOYURokVJ2hgVSJWlaaSTSZAFTsZR_P-cmUhRiCbA:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yZR8BSL9KNobLv3mGAS5nETroLcyE5y645WGdRbQp8JA-rOYURokVJ2hgVSJWlaaSTSZAFTsZR_P-cmUhRiCbA:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yZR8BSL9KNobLv3mGAS5nETroLcyE5y645WGdRbQp8JA-rOYURokVJ2hgVSJWlaaSTSZAFTsZR_P-cmUhRiCbA:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yZR8BSL9KNobLv3mGAS5nETroLcyE5y645WGdRbQp8JA-rOYURokVJ2hgVSJWlaaSTSZAFTsZR_P-cmUhRiCbA:323:21
+
+Dynamically enable window occlusion 1
+1701112819064	geckodriver	INFO	Listening on 127.0.0.1:61598
+1701112822067	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61599" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofilePWfXMo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701112822369	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701112822430	Marionette	INFO	Listening on port 61606
+WebDriver BiDi listening on ws://127.0.0.1:61599
+Read port: 61606
+1701112822563	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61599/devtools/browser/d9134f7b-092b-43c6-9da0-a0cb72866b21
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701112825842	Marionette	INFO	Stopped listening on port 61606
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/modules/UrlClassifierListManager.sys.mjs, line 720: TypeError: this.tablesData[table] is undefined
+1701113267433	geckodriver	INFO	Listening on 127.0.0.1:61722
+1701113270433	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61723" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofilepDTlxc"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701113270731	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701113270790	Marionette	INFO	Listening on port 61730
+WebDriver BiDi listening on ws://127.0.0.1:61723
+Read port: 61730
+1701113270919	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61723/devtools/browser/0ad3e359-a5dc-49c3-8a31-6c8652a4f79c
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701113273782	Marionette	INFO	Stopped listening on port 61730
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yeqRI6D4EJxlMUSZZccD5pwtfzaLDTpJX3HDayk0shqceGy_b45hbJuKBgpOVabz6V_AxXGLT9m1AaxlIx4pIA, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yeqRI6D4EJxlMUSZZccD5pwtfzaLDTpJX3HDayk0shqceGy_b45hbJuKBgpOVabz6V_AxXGLT9m1AaxlIx4pIA:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yeqRI6D4EJxlMUSZZccD5pwtfzaLDTpJX3HDayk0shqceGy_b45hbJuKBgpOVabz6V_AxXGLT9m1AaxlIx4pIA:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yeqRI6D4EJxlMUSZZccD5pwtfzaLDTpJX3HDayk0shqceGy_b45hbJuKBgpOVabz6V_AxXGLT9m1AaxlIx4pIA:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=yeqRI6D4EJxlMUSZZccD5pwtfzaLDTpJX3HDayk0shqceGy_b45hbJuKBgpOVabz6V_AxXGLT9m1AaxlIx4pIA:323:21
+
+Dynamically enable window occlusion 1
+1701114810699	geckodriver	INFO	Listening on 127.0.0.1:62158
+1701114813700	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62159" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileTCfrRg"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701114813978	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701114814038	Marionette	INFO	Listening on port 62169
+WebDriver BiDi listening on ws://127.0.0.1:62159
+Read port: 62169
+1701114814156	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62159/devtools/browser/48d0b3f1-c251-4648-bc44-03171776ed2f
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701114816888	Marionette	INFO	Stopped listening on port 62169
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rya48eNwwgKKTOPLu_OlEEuPf6Cwva9zHIRt4-ReF7T5P8qAfoNTtKQS-Wq-gAkd5rGaoeow0ynE5ow1xhXqfw, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rya48eNwwgKKTOPLu_OlEEuPf6Cwva9zHIRt4-ReF7T5P8qAfoNTtKQS-Wq-gAkd5rGaoeow0ynE5ow1xhXqfw:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rya48eNwwgKKTOPLu_OlEEuPf6Cwva9zHIRt4-ReF7T5P8qAfoNTtKQS-Wq-gAkd5rGaoeow0ynE5ow1xhXqfw:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rya48eNwwgKKTOPLu_OlEEuPf6Cwva9zHIRt4-ReF7T5P8qAfoNTtKQS-Wq-gAkd5rGaoeow0ynE5ow1xhXqfw:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rya48eNwwgKKTOPLu_OlEEuPf6Cwva9zHIRt4-ReF7T5P8qAfoNTtKQS-Wq-gAkd5rGaoeow0ynE5ow1xhXqfw:323:21
+
+Dynamically enable window occlusion 1
+1701115046979	geckodriver	INFO	Listening on 127.0.0.1:62287
+1701115049984	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62288" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileCq4L90"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701115050275	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701115050336	Marionette	INFO	Listening on port 62299
+WebDriver BiDi listening on ws://127.0.0.1:62288
+Read port: 62299
+1701115050471	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62288/devtools/browser/fa2ea73c-809a-4adc-997a-50735eda4b6d
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701115053196	Marionette	INFO	Stopped listening on port 62299
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=57QG0oUEK-b15f1CLK8d-5Clfhh9sfsrjb2eiebwUuLtvzDADqFucjTrB82rlpyUL2KP3EPA5FJ2c4uQETkmiA, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=57QG0oUEK-b15f1CLK8d-5Clfhh9sfsrjb2eiebwUuLtvzDADqFucjTrB82rlpyUL2KP3EPA5FJ2c4uQETkmiA:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=57QG0oUEK-b15f1CLK8d-5Clfhh9sfsrjb2eiebwUuLtvzDADqFucjTrB82rlpyUL2KP3EPA5FJ2c4uQETkmiA:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=57QG0oUEK-b15f1CLK8d-5Clfhh9sfsrjb2eiebwUuLtvzDADqFucjTrB82rlpyUL2KP3EPA5FJ2c4uQETkmiA:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=57QG0oUEK-b15f1CLK8d-5Clfhh9sfsrjb2eiebwUuLtvzDADqFucjTrB82rlpyUL2KP3EPA5FJ2c4uQETkmiA:323:21
+
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/actors/ContentMetaChild.sys.mjs, line 179: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+console.error: (new InvalidStateError("JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment", (void 0), 565))
+JavaScript error: resource:///modules/FaviconLoader.sys.mjs, line 580: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1701115234241	geckodriver	INFO	Listening on 127.0.0.1:62431
+1701115237236	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62432" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofilemzydM8"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701115237527	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701115237590	Marionette	INFO	Listening on port 62442
+WebDriver BiDi listening on ws://127.0.0.1:62432
+Read port: 62442
+1701115237718	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62432/devtools/browser/f52ac28a-2b19-4102-acc2-9f933163c12b
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701115240691	Marionette	INFO	Stopped listening on port 62442
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=XAnO6v-h1GTdrM_Co3k5Y4uPJMbSGLeoC379ftIcTCyswYO2iRsyMSmyhlYdlNhBck8-vS8TKSx4m4Qbz3JYyg, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=XAnO6v-h1GTdrM_Co3k5Y4uPJMbSGLeoC379ftIcTCyswYO2iRsyMSmyhlYdlNhBck8-vS8TKSx4m4Qbz3JYyg:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=XAnO6v-h1GTdrM_Co3k5Y4uPJMbSGLeoC379ftIcTCyswYO2iRsyMSmyhlYdlNhBck8-vS8TKSx4m4Qbz3JYyg:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=XAnO6v-h1GTdrM_Co3k5Y4uPJMbSGLeoC379ftIcTCyswYO2iRsyMSmyhlYdlNhBck8-vS8TKSx4m4Qbz3JYyg:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=XAnO6v-h1GTdrM_Co3k5Y4uPJMbSGLeoC379ftIcTCyswYO2iRsyMSmyhlYdlNhBck8-vS8TKSx4m4Qbz3JYyg:323:21
+
+Dynamically enable window occlusion 1
+1701116681070	geckodriver	INFO	Listening on 127.0.0.1:62788
+1701116684066	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62789" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileIMnoBt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701116684350	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701116684405	Marionette	INFO	Listening on port 62801
+WebDriver BiDi listening on ws://127.0.0.1:62789
+Read port: 62801
+1701116684535	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62789/devtools/browser/4ce0d03a-0a59-469e-a4a3-3005373cfa56
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701116687175	Marionette	INFO	Stopped listening on port 62801
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=eC_YH8qyPvnAt6BelgF5dvzgFyvOZZgUaLcr7EXrCimXTMFOcLKl3sL8L2LUuNhLmzhllage1VkbEEZx8QFHtg, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=eC_YH8qyPvnAt6BelgF5dvzgFyvOZZgUaLcr7EXrCimXTMFOcLKl3sL8L2LUuNhLmzhllage1VkbEEZx8QFHtg:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=eC_YH8qyPvnAt6BelgF5dvzgFyvOZZgUaLcr7EXrCimXTMFOcLKl3sL8L2LUuNhLmzhllage1VkbEEZx8QFHtg:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=eC_YH8qyPvnAt6BelgF5dvzgFyvOZZgUaLcr7EXrCimXTMFOcLKl3sL8L2LUuNhLmzhllage1VkbEEZx8QFHtg:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=eC_YH8qyPvnAt6BelgF5dvzgFyvOZZgUaLcr7EXrCimXTMFOcLKl3sL8L2LUuNhLmzhllage1VkbEEZx8QFHtg:323:21
+
+Dynamically enable window occlusion 1
+JavaScript error: resource://gre/actors/ContentMetaChild.sys.mjs, line 179: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1701116806235	geckodriver	INFO	Listening on 127.0.0.1:62876
+1701116809229	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62877" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileUCujgZ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701116809514	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701116809570	Marionette	INFO	Listening on port 62884
+WebDriver BiDi listening on ws://127.0.0.1:62877
+Read port: 62884
+1701116809697	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62877/devtools/browser/28089bfb-3087-4e96-bd02-30b4715e2876
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701116812278	Marionette	INFO	Stopped listening on port 62884
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vrCkrGZM1fWHREMQv51SCBfK-HiNMH2m_lvKwbw14gr7AKBhMn8WALYezeuuCshC0yc29ltj5J240zHljN5mkA, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vrCkrGZM1fWHREMQv51SCBfK-HiNMH2m_lvKwbw14gr7AKBhMn8WALYezeuuCshC0yc29ltj5J240zHljN5mkA:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vrCkrGZM1fWHREMQv51SCBfK-HiNMH2m_lvKwbw14gr7AKBhMn8WALYezeuuCshC0yc29ltj5J240zHljN5mkA:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vrCkrGZM1fWHREMQv51SCBfK-HiNMH2m_lvKwbw14gr7AKBhMn8WALYezeuuCshC0yc29ltj5J240zHljN5mkA:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vrCkrGZM1fWHREMQv51SCBfK-HiNMH2m_lvKwbw14gr7AKBhMn8WALYezeuuCshC0yc29ltj5J240zHljN5mkA:323:21
+
+Dynamically enable window occlusion 1
+1701117531035	geckodriver	INFO	Listening on 127.0.0.1:63238
+1701117534031	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63239" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileBNdCGF"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701117534325	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701117534384	Marionette	INFO	Listening on port 63247
+WebDriver BiDi listening on ws://127.0.0.1:63239
+Read port: 63247
+1701117534535	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63239/devtools/browser/40f0345a-b274-456c-9575-139326c7a08a
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701117564465	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://top-fwz1.mail.ru/js/code.js, line 5: Script terminated by timeout at:
+w@https://top-fwz1.mail.ru/js/code.js:5:148
+e@https://top-fwz1.mail.ru/js/code.js:44:1
+b@https://top-fwz1.mail.ru/js/code.js:43:388
+
+1701117759256	Marionette	INFO	Stopped listening on port 63247
+Dynamically enable window occlusion 1
+nsole.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701117598368	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701117598425	Marionette	INFO	Listening on port 63333
+WebDriver BiDi listening on ws://127.0.0.1:63325
+Read port: 63333
+1701117598561	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63325/devtools/browser/4a4a3999-8a70-4e7f-881c-0a3121928ba8
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701117628896	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://top-fwz1.mail.ru/js/code.js, line 5: Script terminated by timeout at:
+w@https://top-fwz1.mail.ru/js/code.js:5:148
+e@https://top-fwz1.mail.ru/js/code.js:44:1
+b@https://top-fwz1.mail.ru/js/code.js:43:388
+
+1701117759807	Marionette	INFO	Stopped listening on port 63333
+Dynamically enable window occlusion 1
+OOLS=1 in the environment
+1701117628487	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701117628546	Marionette	INFO	Listening on port 63417
+WebDriver BiDi listening on ws://127.0.0.1:63409
+Read port: 63417
+1701117628670	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63409/devtools/browser/84653112-953c-4e3e-a805-10bfdd87bad5
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701117658653	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://top-fwz1.mail.ru/js/code.js, line 5: Script terminated by timeout at:
+w@https://top-fwz1.mail.ru/js/code.js:5:174
+e@https://top-fwz1.mail.ru/js/code.js:44:1
+b@https://top-fwz1.mail.ru/js/code.js:43:388
+
+1701117760325	Marionette	INFO	Stopped listening on port 63417
+Dynamically enable window occlusion 1
+1701117800711	geckodriver	INFO	Listening on 127.0.0.1:63617
+1701117803705	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63618" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileSOvKmW"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701117803992	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701117804049	Marionette	INFO	Listening on port 63626
+WebDriver BiDi listening on ws://127.0.0.1:63618
+Read port: 63626
+1701117804183	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63618/devtools/browser/50432511-b70c-437e-b4f1-234b92445daf
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701117834356	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://top-fwz1.mail.ru/js/code.js, line 5: Script terminated by timeout at:
+w@https://top-fwz1.mail.ru/js/code.js:5:148
+e@https://top-fwz1.mail.ru/js/code.js:44:1
+b@https://top-fwz1.mail.ru/js/code.js:43:388
+
+1701117885947	Marionette	INFO	Stopped listening on port 63626
+Dynamically enable window occlusion 1
+OOLS=1 in the environment
+1701117828032	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701117828091	Marionette	INFO	Listening on port 63704
+WebDriver BiDi listening on ws://127.0.0.1:63695
+Read port: 63704
+1701117828211	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63695/devtools/browser/c646ae0c-6eb4-4ec7-aba5-3a7f77a05c77
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701117858267	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://top-fwz1.mail.ru/js/code.js, line 5: Script terminated by timeout at:
+w@https://top-fwz1.mail.ru/js/code.js:5:148
+e@https://top-fwz1.mail.ru/js/code.js:44:1
+b@https://top-fwz1.mail.ru/js/code.js:43:388
+
+1701117887404	Marionette	INFO	Stopped listening on port 63704
+Dynamically enable window occlusion 1
+nsole.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701117879689	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701117879743	Marionette	INFO	Listening on port 63807
+WebDriver BiDi listening on ws://127.0.0.1:63797
+Read port: 63807
+1701117879860	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63797/devtools/browser/11856ba9-4c34-42f2-9da3-d59ac0bb846d
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701117882791	Marionette	INFO	Stopped listening on port 63807
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=jAWKC4rSjpeQ9GUVL-o8_PgkiVF0ph2k-V2o5vSRrHX4JPFx1ENejXB_lXWRxTQOdpVT3RxKRkYwcbzUZ1Qikg, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=jAWKC4rSjpeQ9GUVL-o8_PgkiVF0ph2k-V2o5vSRrHX4JPFx1ENejXB_lXWRxTQOdpVT3RxKRkYwcbzUZ1Qikg:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=jAWKC4rSjpeQ9GUVL-o8_PgkiVF0ph2k-V2o5vSRrHX4JPFx1ENejXB_lXWRxTQOdpVT3RxKRkYwcbzUZ1Qikg:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=jAWKC4rSjpeQ9GUVL-o8_PgkiVF0ph2k-V2o5vSRrHX4JPFx1ENejXB_lXWRxTQOdpVT3RxKRkYwcbzUZ1Qikg:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=jAWKC4rSjpeQ9GUVL-o8_PgkiVF0ph2k-V2o5vSRrHX4JPFx1ENejXB_lXWRxTQOdpVT3RxKRkYwcbzUZ1Qikg:323:21
+
+Dynamically enable window occlusion 1
+1701117950715	geckodriver	INFO	Listening on 127.0.0.1:63953
+1701117953714	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63954" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofile3p4fZi"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701117954014	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701117954075	Marionette	INFO	Listening on port 63961
+WebDriver BiDi listening on ws://127.0.0.1:63954
+Read port: 63961
+1701117954222	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63954/devtools/browser/76152429-8a6b-41b3-9399-6061f8e725eb
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701117956784	Marionette	INFO	Stopped listening on port 63961
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ysuYUnFb1-757IIOZYOJVzipotQGw0Yzdbx8UNFqCDuc4WQpnqo-JCB7X2404XpoGvqIHkqaRFdO337snJnUbQ, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ysuYUnFb1-757IIOZYOJVzipotQGw0Yzdbx8UNFqCDuc4WQpnqo-JCB7X2404XpoGvqIHkqaRFdO337snJnUbQ:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ysuYUnFb1-757IIOZYOJVzipotQGw0Yzdbx8UNFqCDuc4WQpnqo-JCB7X2404XpoGvqIHkqaRFdO337snJnUbQ:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ysuYUnFb1-757IIOZYOJVzipotQGw0Yzdbx8UNFqCDuc4WQpnqo-JCB7X2404XpoGvqIHkqaRFdO337snJnUbQ:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ysuYUnFb1-757IIOZYOJVzipotQGw0Yzdbx8UNFqCDuc4WQpnqo-JCB7X2404XpoGvqIHkqaRFdO337snJnUbQ:323:21
+
+Dynamically enable window occlusion 1
+1701118025249	geckodriver	INFO	Listening on 127.0.0.1:64108
+1701118028251	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64109" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofilejN1L5X"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701118028565	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701118028640	Marionette	INFO	Listening on port 64116
+WebDriver BiDi listening on ws://127.0.0.1:64109
+Read port: 64116
+1701118028764	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64109/devtools/browser/46a12550-9e24-4e58-97e0-28c77161d9f4
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://devtools/client/jsonview/Sniffer.sys.mjs, line 53: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+1701118061074	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1701118085245	geckodriver	INFO	Listening on 127.0.0.1:64250
+1701118088249	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64251" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileOysY5i"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701118088543	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701118088601	Marionette	INFO	Listening on port 64259
+WebDriver BiDi listening on ws://127.0.0.1:64251
+Read port: 64259
+1701118088728	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64251/devtools/browser/47b26198-d112-4c3e-a9bd-b3f767a339bd
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701118091857	Marionette	INFO	Stopped listening on port 64259
+Dynamically enable window occlusion 1
+1701118116103	geckodriver	INFO	Listening on 127.0.0.1:64391
+1701118119104	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64392" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileLTagAp"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701118119398	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701118119459	Marionette	INFO	Listening on port 64400
+WebDriver BiDi listening on ws://127.0.0.1:64392
+Read port: 64400
+1701118119599	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64392/devtools/browser/c4780d62-bbbc-4515-887c-1f354002eb14
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701118122448	Marionette	INFO	Stopped listening on port 64400
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Q_xEumbWec184CAKAteZxOQgBpfAVGBHGW-hzDievJ1hr8IdJ6vR9VI1478s9nSPIp8ydbWNpjzUu3pTB-18ng, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Q_xEumbWec184CAKAteZxOQgBpfAVGBHGW-hzDievJ1hr8IdJ6vR9VI1478s9nSPIp8ydbWNpjzUu3pTB-18ng:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Q_xEumbWec184CAKAteZxOQgBpfAVGBHGW-hzDievJ1hr8IdJ6vR9VI1478s9nSPIp8ydbWNpjzUu3pTB-18ng:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Q_xEumbWec184CAKAteZxOQgBpfAVGBHGW-hzDievJ1hr8IdJ6vR9VI1478s9nSPIp8ydbWNpjzUu3pTB-18ng:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Q_xEumbWec184CAKAteZxOQgBpfAVGBHGW-hzDievJ1hr8IdJ6vR9VI1478s9nSPIp8ydbWNpjzUu3pTB-18ng:323:21
+
+Dynamically enable window occlusion 1
+1701118983212	geckodriver	INFO	Listening on 127.0.0.1:64710
+1701118986218	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64711" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileOtP9Sl"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701118986497	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701118986556	Marionette	INFO	Listening on port 64723
+WebDriver BiDi listening on ws://127.0.0.1:64711
+Read port: 64723
+1701118986682	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64711/devtools/browser/71d81206-c063-4127-adef-aaede64b7edc
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701118989658	Marionette	INFO	Stopped listening on port 64723
+JavaScript warning: https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kfvtH6RZnNJGuVE3cgOqIAXu_icQSImSfTYAHNfwR2Y_9Z7x_iKxAb7NKmWmDBMxAI_fK8hfyHVjSDKzAnfqMg, line 2959: Script terminated by timeout at:
+CalculateNewProcessedItemsBySelector@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kfvtH6RZnNJGuVE3cgOqIAXu_icQSImSfTYAHNfwR2Y_9Z7x_iKxAb7NKmWmDBMxAI_fK8hfyHVjSDKzAnfqMg:2959:29
+DeferredProcessCssRules@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kfvtH6RZnNJGuVE3cgOqIAXu_icQSImSfTYAHNfwR2Y_9Z7x_iKxAb7NKmWmDBMxAI_fK8hfyHVjSDKzAnfqMg:2973:36
+AntiBanner/GetDeferredHandler/<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kfvtH6RZnNJGuVE3cgOqIAXu_icQSImSfTYAHNfwR2Y_9Z7x_iKxAb7NKmWmDBMxAI_fK8hfyHVjSDKzAnfqMg:2982:54
+ns.SetTimeout/KasperskyLab<@https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kfvtH6RZnNJGuVE3cgOqIAXu_icQSImSfTYAHNfwR2Y_9Z7x_iKxAb7NKmWmDBMxAI_fK8hfyHVjSDKzAnfqMg:323:21
+
+Dynamically enable window occlusion 1
+1701119218419	geckodriver	INFO	Listening on 127.0.0.1:64866
+1701119221424	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64867" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileUKd41M"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701119221744	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701119221803	Marionette	INFO	Listening on port 64877
+WebDriver BiDi listening on ws://127.0.0.1:64867
+Read port: 64877
+1701119221936	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64867/devtools/browser/c8548d9e-61d3-411d-9aab-42293d6a2d07
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701119225212	Marionette	INFO	Stopped listening on port 64877
+Dynamically enable window occlusion 1
+1701119404607	geckodriver	INFO	Listening on 127.0.0.1:64973
+1701119407604	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64974" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileHfziqb"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701119407909	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701119407974	Marionette	INFO	Listening on port 64981
+WebDriver BiDi listening on ws://127.0.0.1:64974
+Read port: 64981
+1701119408142	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64974/devtools/browser/b3514036-1df1-4e1b-94a2-f515263948e4
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701119412641	Marionette	INFO	Stopped listening on port 64981
+JavaScript warning: https://mc.yandex.ru/metrika/tag.js, line 134: Script terminated by timeout at:
+C/<@https://mc.yandex.ru/metrika/tag.js:134:225
+
+Dynamically enable window occlusion 1
+1701120058894	geckodriver	INFO	Listening on 127.0.0.1:65160
+1701120061889	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65161" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileczIE00"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701120062173	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701120062228	Marionette	INFO	Listening on port 65170
+WebDriver BiDi listening on ws://127.0.0.1:65161
+Read port: 65170
+1701120062367	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:65161/devtools/browser/b65404e7-bbad-4e7a-9ebd-6fa07dfe8574
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701120065154	Marionette	INFO	Stopped listening on port 65170
+Dynamically enable window occlusion 1
+1701120340452	geckodriver	INFO	Listening on 127.0.0.1:65281
+1701120343452	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65282" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileKYfuu3"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701120343736	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701120343796	Marionette	INFO	Listening on port 65291
+WebDriver BiDi listening on ws://127.0.0.1:65282
+Read port: 65291
+1701120343926	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:65282/devtools/browser/e49b21e3-747c-4536-a657-4e7a57f69259
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701120347170	Marionette	INFO	Stopped listening on port 65291
+JavaScript warning: https://mc.yandex.ru/metrika/tag.js, line 175: Script terminated by timeout at:
+L<@https://mc.yandex.ru/metrika/tag.js:175:132
+n@https://mc.yandex.ru/metrika/tag.js:153:210
+cc@https://mc.yandex.ru/metrika/tag.js:145:330
+td@https://mc.yandex.ru/metrika/tag.js:145:188
+Q@https://mc.yandex.ru/metrika/tag.js:132:456
+c.prototype.ba@https://mc.yandex.ru/metrika/tag.js:340:9
+C/<@https://mc.yandex.ru/metrika/tag.js:134:244
+C/<@https://mc.yandex.ru/metrika/tag.js:134:244
+
+Dynamically enable window occlusion 1

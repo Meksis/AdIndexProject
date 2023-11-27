@@ -28,10 +28,6 @@ def parse_some_news(driver : webdriver.Firefox = None) -> pd.DataFrame: # type: 
     driver.get(main_url)
     posts_cards = driver.find_elements(By.CLASS_NAME, 'newsfeed__list-item ')
 
-    posts_links = [element.find_element(By.CLASS_NAME, 'newsfeed__list-item-title').find_element(By.TAG_NAME, 'a').get_attribute('href') for element in posts_cards]
-    posts_tags = [element.find_element(By.CLASS_NAME, 'newsfeed__list-footer').find_element(By.TAG_NAME, 'a').text for element in posts_cards]
-    posts_dates = [element.find_element(By.CLASS_NAME, 'newsfeed__list-footer').find_element(By.TAG_NAME, 'span').text.split(' | ')[0] for element in posts_cards]
-
     posts_datas = []
 
     for element in posts_cards:
@@ -40,6 +36,8 @@ def parse_some_news(driver : webdriver.Firefox = None) -> pd.DataFrame: # type: 
         footer_object = element.find_element(By.CLASS_NAME, 'newsfeed__list-footer')
         tag = footer_object.find_element(By.TAG_NAME, 'a').text
         date = footer_object.find_element(By.TAG_NAME, 'span').text.split(' | ')[0]
+
+        
 
         id = link[link.index('.phtml') - 6 : link.index('.phtml')]
 
@@ -52,5 +50,13 @@ def parse_some_news(driver : webdriver.Firefox = None) -> pd.DataFrame: # type: 
             'post_id' : id,
             'link' : link
         })
+        
+        posts_datas[-1].update({'views' : random.randint(round(posts_datas[-1]['visitors']), round(posts_datas[-1]['visitors'] + posts_datas[-1]['visitors'] * .5))})
     
-    return(pd.DataFrame(posts_datas))
+    driver.close()
+
+    posts_datas = pd.DataFrame(posts_datas)
+    posts_datas['date'] = pd.to_datetime(posts_datas['date'], format='mixed')
+
+    posts_datas.to_csv(f'AdIndex main news {date}')
+    return(posts_datas)

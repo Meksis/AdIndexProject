@@ -1,0 +1,62 @@
+1701105982187	geckodriver	INFO	Listening on 127.0.0.1:59325
+1701105985191	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59326" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileeJ8kVu"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701105985488	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701105985547	Marionette	INFO	Listening on port 59336
+WebDriver BiDi listening on ws://127.0.0.1:59326
+Read port: 59336
+1701105985676	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59326/devtools/browser/d2cc325c-1b51-4abb-a951-7d12d038030a
+1701106016591	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://top-fwz1.mail.ru/js/code.js, line 2: Script terminated by timeout at:
+J@https://top-fwz1.mail.ru/js/code.js:2:224
+c@https://top-fwz1.mail.ru/js/code.js:56:55
+
+1701106179768	Marionette	INFO	Stopped listening on port 59336
+Dynamically enable window occlusion 1
+1701106181936	geckodriver	INFO	Listening on 127.0.0.1:59462
+1701106184937	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59463" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofilezZxkto"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701106185234	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701106185268	Marionette	INFO	Listening on port 59470
+WebDriver BiDi listening on ws://127.0.0.1:59463
+Read port: 59470
+1701106185379	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+DevTools listening on ws://127.0.0.1:59463/devtools/browser/ed94e6a9-c4ca-467f-ad21-7fb28f7ba6eb
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: Failed to create WebGL context: WebGL is currently disabled.
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: Failed to create WebGL context: WebGL is currently disabled.
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+console.warn: "Listener for event 'frame' did not return a promise."
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1701111332454	geckodriver	INFO	Listening on 127.0.0.1:60330
+1701111335448	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60331" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\orlov\\AppData\\Local\\Temp\\rust_mozprofileXqzIry"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1701111335733	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1701111335791	Marionette	INFO	Listening on port 60340
+WebDriver BiDi listening on ws://127.0.0.1:60331
+Read port: 60340
+1701111335913	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60331/devtools/browser/3565dbdc-68ab-4ef6-9d34-a4996c362c38
+JavaScript error: https://adindex.ru/news/all.phtml, line 56: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 554: TypeError: window.yaContextCb is undefined
+JavaScript error: https://adindex.ru/news/all.phtml, line 575: TypeError: window.Ya is undefined
+JavaScript warning: https://st.top100.ru/top100/top100.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1701111365887	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.

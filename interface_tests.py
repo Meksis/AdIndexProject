@@ -27,7 +27,7 @@ if 'datas' not in st.session_state:
 else:
     data = st.session_state['datas']
 
-
+# st.write(data)
 # Создание списка уникальных дат для выбора периода
 date_list = sorted(data['date'].unique())
 
@@ -58,7 +58,7 @@ with col1:
         selected_date_scatter = st.date_input(      # Создаем поле для ввода даты, задавая размеры от минимальной даты в датафрейме до текущей и выставляя значение от текущей недели до 7 дней назад
             "Выберете промежуток выборки",
             (
-                datetime.date(today.year, today.month, today.day - 7),
+                datetime.date(today.year, today.month, today.day - 7 if today.day - 7 > 0 else 1),
                 today
             ),
             datetime.date(data.date.iloc[0].year, data.date.iloc[0].month, data.date.iloc[0].day - 7),
@@ -68,7 +68,8 @@ with col1:
             key='scatter_datepick'
         )
 
-        filtered_data_scatter = data[data['date'] <= pd.Timestamp(selected_date_scatter[1])][data['date'] >= pd.Timestamp(selected_date_scatter[0])]   
+
+        filtered_data_scatter = data[data['date'] <= pd.Timestamp(selected_date_scatter[1].strftime("%Y.%d.%m"))][data['date'] >= pd.Timestamp(selected_date_scatter[0].strftime("%Y.%d.%m"))]   
 
 
         # st.write(pd.DataFrame({'Средняя глубина просмотра' : filtered_data_scatter['visitors'].sum() / filtered_data_scatter['views'].sum() }, index=['Средняя глубина просмотра'], columns = ['Средняя глубина просмотра'] ))
@@ -102,7 +103,7 @@ with col3:
         selected_date_diagram = st.date_input(      # Создаем поле для ввода даты, задавая размеры от минимальной даты в датафрейме до текущей и выставляя значение от текущей недели до 7 дней назад
             "Выберете промежуток выборки",
             (
-                datetime.date(today.year, today.month, today.day - 7),
+                datetime.date(today.year, today.month, today.day - 7 if today.day - 7 > 0 else 1),
                 today
             ),
             datetime.date(data.date.iloc[0].year, data.date.iloc[0].month, data.date.iloc[0].day - 7),
@@ -124,7 +125,7 @@ with col3:
         st.plotly_chart(fig_pie)
     
     except Exception as e:
-        # raise e
-        print(str(e))
+        raise e
+        # print(str(e))
 
 

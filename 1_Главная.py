@@ -4,9 +4,7 @@ import plotly.express as px
 
 import datetime
 
-import parser
-
-
+from Utils.parser import *
 st.set_page_config(layout="wide", initial_sidebar_state='collapsed') # установка широкого расположения объектов
 
 # Загрузка данных (замените 'your_data.csv' на путь к вашему файлу данных)
@@ -21,7 +19,7 @@ st.set_page_config(layout="wide", initial_sidebar_state='collapsed') # уста�
     # post_id TEXT
 
 if 'datas' not in st.session_state:
-    st.session_state['datas'] = parser.parse_some_news()
+    st.session_state['datas'] = parse_some_news()
     data = st.session_state['datas']
 
 else:
@@ -37,7 +35,7 @@ st.title('Графики и диаграммы с выбором периода'
 
 if st.button('Обновить данные'):
     with st.spinner('Обновляемся'):
-        st.session_state['datas'] = parser.parse_some_news()
+        st.session_state['datas'] = parse_some_news()
         data = st.session_state['datas']
 
 
@@ -119,7 +117,10 @@ with col3:
         selected_metric_diagram = col3.selectbox('Выберите метрику для сравнения', ['date', 'author', 'visitors', 'views'], key='metric_selector' )
 
         # Фильтрация данных по выбранной дате
-        filtered_data_diagram = data[data['date'] <= pd.Timestamp(selected_date_diagram[1])][data['date'] >= pd.Timestamp(selected_date_diagram[0])]        # Строки с датами между двух выбранных
+        filtered_data_diagram = data[data['date'] <= pd.Timestamp(selected_date_diagram[1].strftime("%Y.%d.%m"))][data['date'] >= pd.Timestamp(selected_date_diagram[0].strftime("%Y.%d.%m"))]        # Строки с датами между двух выбранных
+
+
+
         # fig_pie = px.pie(filtered_data_diagram, names='visitors', title='Круговая диаграмма')
         fig_pie = px.pie(filtered_data_diagram, names=selected_metric_diagram, title='Круговая диаграмма')
         st.plotly_chart(fig_pie)

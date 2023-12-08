@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 
 import pandas as pd
 import random
+import datetime
+import time
 
 
 main_url = 'https://adindex.ru/news/all.phtml'
@@ -20,43 +22,151 @@ authors_names = [
 ]
 
 
-def parse_some_news(driver : webdriver.Firefox = None) -> pd.DataFrame: # type: ignore
+def parse_some_news(driver : webdriver.Firefox = None, days4parse : int = 1) -> pd.DataFrame: # type: ignore
     if not driver:
         driver = webdriver.Firefox()
 
-
-    driver.get(main_url)
-    posts_cards = driver.find_elements(By.CLASS_NAME, 'newsfeed__list-item ')
-
+    days_iterated = 0
+    button_clicked = 0
+    posts_total_info = []
+    date_prev = ''
     posts_datas = []
 
-    for element in posts_cards:
-        link = element.find_element(By.CLASS_NAME, 'newsfeed__list-item-title').find_element(By.TAG_NAME, 'a').get_attribute('href')
+    driver.get(main_url)
+
+    while days_iterated != days4parse:
+        if isinstance(posts_datas, list):
+            posts_cards = driver.find_elements(By.CLASS_NAME, 'newsfeed__list-item ')
         
-        footer_object = element.find_element(By.CLASS_NAME, 'newsfeed__list-footer')
-        tag = footer_object.find_element(By.TAG_NAME, 'a').text
-        date = footer_object.find_element(By.TAG_NAME, 'span').text.split(' | ')[0]
+        else:
+            posts_cards = driver.find_elements(By.CLASS_NAME, 'newsfeed__list-item ')[posts_datas.post_id.size * button_clicked : ]
 
+
+        posts_datas = []
+
+        for element in posts_cards:
+            link = element.find_element(By.CLASS_NAME, 'newsfeed__list-item-title').find_element(By.TAG_NAME, 'a').get_attribute('href')
+            
+            footer_object = element.find_element(By.CLASS_NAME, 'newsfeed__list-footer')
+            tag = footer_object.find_element(By.TAG_NAME, 'a').text
+            date = footer_object.find_element(By.TAG_NAME, 'span').text.split(' | ')
+            date = date[0] if len(date[0]) > len(date[1]) else date[1]
+
+
+            id = link[link.index('.phtml') - 6 : link.index('.phtml')]
+
+
+
+            posts_datas.append({
+                'date' : date,
+                'author' : random.choice(authors_names),
+                'visitors' : random.randint(100, 20000),
+                'post_tag' : tag,
+                'post_id' : id,
+                'link' : link
+            })
+            
+            posts_datas[-1].update({'views' : random.randint(round(posts_datas[-1]['visitors']), round(posts_datas[-1]['visitors'] + posts_datas[-1]['visitors'] * .5))})
+
+            # print(posts_datas[-1], date, id)
+
+            if not date_prev:
+                date_prev = str(date)
+            
+            else:
+                if date != date_prev:
+                    date_prev = str(date)
+                    days_iterated += 1
+
+
+        posts_datas = pd.DataFrame(posts_datas)
+        posts_datas['date'] = pd.to_datetime(posts_datas['date'], format='mixed')
+
+        # try:
+        #     posts_datas['date'] = pd.to_datetime(posts_datas['date'], format='mixed')
         
+        # except Exception as e:
+        #     print(posts_datas)
+        #     print(date, id)
+        #     raise e
 
-        id = link[link.index('.phtml') - 6 : link.index('.phtml')]
+
+        # posts_datas['date'] = pd.to_datetime(posts_datas['date'], format='%d.%m.%y')
+
+        if isinstance(posts_total_info, list):
+            posts_total_info = posts_datas.copy()
+
+        else:
+            posts_total_info = pd.concat([posts_total_info, posts_datas], ignore_index = True)
 
 
-        posts_datas.append({
-            'date' : date,
-            'author' : random.choice(authors_names),
-            'visitors' : random.randint(100, 20000),
-            'post_tag' : tag,
-            'post_id' : id,
-            'link' : link
-        })
+        show_more_button = driver.find_element(By.CLASS_NAME, 'js-load-news')
+        show_more_button.click()
+        button_clicked += 1
+
+        time.sleep(1)
+
+    
+    date_changed = False
+
+    while not date_changed:
+        posts_cards = driver.find_elements(By.CLASS_NAME, 'newsfeed__list-item ')[posts_datas.post_id.size * button_clicked : ]
+
+
+        posts_datas = []
+
+        for element in posts_cards:
+            link = element.find_element(By.CLASS_NAME, 'newsfeed__list-item-title').find_element(By.TAG_NAME, 'a').get_attribute('href')
+            
+            footer_object = element.find_element(By.CLASS_NAME, 'newsfeed__list-footer')
+            tag = footer_object.find_element(By.TAG_NAME, 'a').text
+            date = footer_object.find_element(By.TAG_NAME, 'span').text.split(' | ')
+            date = date[0] if len(date[0]) > len(date[1]) else date[1]
+
+            
+
+            id = link[link.index('.phtml') - 6 : link.index('.phtml')]
+
+            print(date, id)
+            
+
+            posts_datas.append({
+                'date' : date,
+                'author' : random.choice(authors_names),
+                'visitors' : random.randint(100, 20000),
+                'post_tag' : tag,
+                'post_id' : id,
+                'link' : link
+            })
+            
+            posts_datas[-1].update({'views' : random.randint(round(posts_datas[-1]['visitors']), round(posts_datas[-1]['visitors'] + posts_datas[-1]['visitors'] * .5))})
+            
+            if date != date_prev:
+                date_prev = str(date)
+                date_changed = True
+
+
+        posts_datas = pd.DataFrame(posts_datas)
+        posts_datas['date'] = pd.to_datetime(posts_datas['date'], format='mixed')
+        # posts_datas['date'] = pd.to_datetime(posts_datas['date'], format='%d.%m.%y')
+
+        posts_datas = posts_datas[posts_datas['date'] != date]
+
+        if isinstance(posts_total_info, list):
+            posts_total_info = posts_datas.copy()
+
+        else:
+            posts_total_info = pd.concat([posts_total_info, posts_datas], ignore_index = True)
+
+
+        show_more_button = driver.find_element(By.CLASS_NAME, 'js-load-news')
+        show_more_button.click()
+        button_clicked += 1
+
+        # time.sleep(1)
         
-        posts_datas[-1].update({'views' : random.randint(round(posts_datas[-1]['visitors']), round(posts_datas[-1]['visitors'] + posts_datas[-1]['visitors'] * .5))})
     
     driver.close()
 
-    posts_datas = pd.DataFrame(posts_datas)
-    posts_datas['date'] = pd.to_datetime(posts_datas['date'], format='mixed')
-
-    posts_datas.to_csv(f'AdIndex main news {date}')
-    return(posts_datas)
+    posts_total_info.to_csv(f'AdIndex main news {datetime.datetime.today().strftime("%Y-%m-%d")} - {days4parse} days.csv')
+    return(posts_total_info)

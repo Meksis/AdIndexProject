@@ -60,3 +60,28 @@ def parse_some_news(driver : webdriver.Firefox = None) -> pd.DataFrame: # type: 
 
     posts_datas.to_csv(f'AdIndex main news {date}')
     return(posts_datas)
+
+import requests
+
+
+def get_data_from_url(url: str ):
+    params = {
+        'ids': '22386646',
+        # 'metrics': 'ym:s:visits,ym:s:pageviews,ym:s:users,ym:s:bounceRate,ym:s:pageDepth,ym:s:avgVisitDurationSeconds',
+        'metrics': 'ym:s:pageviews',  # Метрика для просмотров страниц
+        'dimensions': 'ym:s:referer',  # Размерность для получения ссылок
+        'date1': 'today',  # 7daysAgo за неделю, 30daysAgo за месяц, 365daysAgo за год
+        'date2': 'today',
+        'filters': f"ym:pv:URL=='{url}'"
+    }
+
+    url = 'https://api-metrika.yandex.net/stat/v1/data'
+
+
+    headers = {
+        'Authorization': 'OAuth y0_AgAAAABxT5u9AArjtwAAAADzHTIKv-VGe5uzTHqKqd3WWTTeIiZQ2WU',
+    }
+
+    response = requests.get(url, headers=headers, params=params )
+    return response.json()
+

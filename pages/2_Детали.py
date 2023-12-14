@@ -36,7 +36,7 @@ if 'datas_full' not in st.session_state:
             st.session_state['picked_dates'][1],
 
             format="YYYY.MM.DD",
-            key='scatter_datepick'
+            key='datepick_details_page'
         )
 
         refresh_datas((selected_date[1] - selected_date[0]).days)

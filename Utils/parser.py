@@ -64,14 +64,15 @@ def parse_some_news(driver : webdriver.Firefox = None, days4parse : int = 1) -> 
 
             posts_datas.append({
                 'date' : date,
-                'author' : random.choice(authors_names),
-                'visitors' : random.randint(100, 20000),
+                'author' : random.choice(authors_names),            # Позже заменить
+                # 'visitors' : random.randint(100, 20000),          # Тестовый вариант
+                # 'visitors' : 0,                                     # Заглушка
                 'post_tag' : tag,
                 'post_id' : id,
                 'link' : link
             })
             
-            posts_datas[-1].update({'views' : random.randint(round(posts_datas[-1]['visitors']), round(posts_datas[-1]['visitors'] + posts_datas[-1]['visitors'] * .5))})
+            # posts_datas[-1].update({'views' : random.randint(round(posts_datas[-1]['visitors']), round(posts_datas[-1]['visitors'] + posts_datas[-1]['visitors'] * .5))})
 
             if not date_prev:
                 date_prev = str(date)
@@ -125,13 +126,13 @@ def parse_some_news(driver : webdriver.Firefox = None, days4parse : int = 1) -> 
             posts_datas.append({
                 'date' : date,
                 'author' : random.choice(authors_names),
-                'visitors' : random.randint(100, 20000),
+                # 'visitors' : random.randint(100, 20000),
                 'post_tag' : tag,
                 'post_id' : id,
                 'link' : link
             })
             
-            posts_datas[-1].update({'views' : random.randint(round(posts_datas[-1]['visitors']), round(posts_datas[-1]['visitors'] + posts_datas[-1]['visitors'] * .5))})
+            # posts_datas[-1].update({'views' : random.randint(round(posts_datas[-1]['visitors']), round(posts_datas[-1]['visitors'] + posts_datas[-1]['visitors'] * .5))})
             
             if date != date_prev:
                 date_prev = str(date)
@@ -253,6 +254,30 @@ def get_data_from_url(url: str, days_from : str = "yesterday", days_to : str = "
         'Telegram' : out[1]
     }
 
+    totals = {}
 
+    print(out, '\n')
+
+    if out[1]['Telegram']:
+        totals.update(
+            {
+                key : out[0]['Поисковые системы'][key] + out[1]['Telegram'][key]
+                for key in list(out[0]['Поисковые системы'].keys())[ : 3]
+            }
+        )
+
+        totals.update(
+            {
+                key : median([out[0]['Поисковые системы'][key], out[1]['Telegram'][key]])
+                for key in list(out[0]['Поисковые системы'].keys())[3 :]
+            }
+        )
+
+    else:
+        totals.update(
+            out[0]['Поисковые системы']
+        )
+
+    totals.update({'link' : url})
     # return response.json()
-    return out
+    return out, totals

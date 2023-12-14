@@ -163,7 +163,7 @@ def parse_some_news(driver : webdriver.Firefox = None, days4parse : int = 1) -> 
     posts_total_info.date = pd.to_datetime(posts_total_info.date, dayfirst=True, format='%d.%m.%Y')
 
 
-    posts_total_info.to_csv(f'AdIndex main news {datetime.datetime.today().strftime("%Y-%m-%d")} - {days4parse} days.csv')
+    posts_total_info.to_csv(f'csvs/AdIndex main news {datetime.datetime.today().strftime("%Y-%m-%d")} - {days4parse} days.csv')
     return(posts_total_info)
 
 

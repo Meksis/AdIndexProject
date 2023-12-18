@@ -4,31 +4,52 @@ import plotly.express as px
 
 import datetime
 
-from Utils.parser_old import *
+from Utils.parser import *
+
+
 st.set_page_config(layout="wide", initial_sidebar_state='collapsed') # установка широкого расположения объектов
-st.code(st.session_state)
+# st.write(st.session_state)
+# st.write(__file__)
+# st.write(st.session_state['datas'])
 
-def refresh_datas(parse_days : int = 1):
-    st.session_state['datas'] = parse_some_news(days4parse=parse_days)
 
+def refresh_datas(date_from : datetime.date, date_to : datetime.date, csv_save_path : str):
+    st.session_state['datas'] = parse_some_news(date_from, date_to, csv_save_path)
 
-def refresh_metrics():
+def refresh_metrics(csv_save_path):
     datas = st.session_state['datas']
     datas_metrics = pd.DataFrame()
 
+    # if os.path.exists(csv_save_path):
+    #     loaded_df = pd.read_csv(csv_save_path, index_col=0)
+    #     differences = pd.merge(datas, loaded_df, 'left')
+    #     st.write(differences)
+
+
+    #     for link in differences.link:
+    #         datas_metrics = pd.concat([datas_metrics, pd.DataFrame([get_data_from_url(link)[1]])])
+
+
+    # else:
+    #     for link in datas.link:
+    #         datas_metrics = pd.concat([datas_metrics, pd.DataFrame([get_data_from_url(link)[1]])])
     
     for link in datas.link:
         datas_metrics = pd.concat([datas_metrics, pd.DataFrame([get_data_from_url(link)[1]])])
 
-    st.session_state['datas_full'] = datas.merge(datas_metrics, how='inner', on='link')
-    st.session_state['datas_full'].to_csv(f'AdIndex main news METRICS {datetime.datetime.today().strftime("%Y-%m-%d")}.csv')
+    datas.date = pd.to_datetime(datas.date)
+    merged = pd.concat([datas.merge(datas_metrics, how='inner', on='link'), pd.DataFrame([{'Copyright' : None}])])
+    
+
+    st.session_state['datas_full'] = merged
+    st.session_state['datas_full'].to_csv(csv_save_path)
 
 
 
 
 
 
-today = datetime.datetime.now()
+today = datetime.date.today()
 
 if 'picked_dates' not in st.session_state:
     st.session_state['picked_dates'] = [datetime.date(today.year, today.month, today.day - 7 if today.day - 7 > 0 else 1), today]
@@ -57,10 +78,15 @@ except Exception as e:
 if st.button('Обновить данные'):
     with st.spinner('Обновляемся'):
         st.session_state['picked_dates'] = selected_date
-        refresh_datas((st.session_state['picked_dates'][1] - st.session_state['picked_dates'][0]).days)
-        refresh_metrics()
+        csv_save_path = f'./csvs/AdIndex news {st.session_state["picked_dates"][0]}__{st.session_state["picked_dates"][1]}.csv'
 
-        data = st.session_state['datas_full']
+        csv_save_metrics_path = csv_save_path.split()
+        csv_save_metrics_path = ' '.join(csv_save_metrics_path[ : 2]) + ' metrics ' + csv_save_metrics_path[-1]
+
+        refresh_datas(st.session_state['picked_dates'][0], st.session_state['picked_dates'][1], csv_save_path)
+        refresh_metrics(csv_save_metrics_path)
+
+        # data = st.session_state['datas_full']
 
 
 
@@ -68,9 +94,10 @@ if st.button('Обновить данные'):
 
 if 'datas_full' in st.session_state:
     data = st.session_state['datas_full']
-    date_list = sorted(data['date'].unique())
-    filtered_data = data[data['date'] <= pd.Timestamp(st.session_state['picked_dates'][1].strftime("%Y.%m.%d"))][data['date'] >= pd.Timestamp(st.session_state['picked_dates'][0].strftime("%Y.%m.%d"))]   
+    data = data[data['date'] <= pd.Timestamp(st.session_state['picked_dates'][1].strftime("%Y.%m.%d"))]
+    data = data[data['date'] >= pd.Timestamp(st.session_state['picked_dates'][0].strftime("%Y.%m.%d"))]
 
+    filtered_data = data[data['date'] <= pd.Timestamp(st.session_state['picked_dates'][1].strftime("%Y.%m.%d"))][data['date'] >= pd.Timestamp(st.session_state['picked_dates'][0].strftime("%Y.%m.%d"))]
 
     # Разделение экрана на три столбца
     col1, _, col3 = st.columns(3)

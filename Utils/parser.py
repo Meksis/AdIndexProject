@@ -11,6 +11,8 @@ import time
 import requests
 from statistics import median
 
+import os
+
 
 # pd.set_option('display.max_rows', None)
 
@@ -55,12 +57,12 @@ def get_post_data(post_card_object):
                 'link' : link
                 }
             ]
-        ),
-        publicated_at
+        )
     )
 
 
-def parse_some_news(date_from : datetime.date, date_to : datetime.date, driver : webdriver.Firefox = None) -> pd.DataFrame:
+def parse_some_news(date_from : datetime.date, date_to : datetime.date, csv_save_path : str, driver : webdriver.Firefox = None) -> pd.DataFrame:
+    # save_read_csv_path = f'/csvs/AdIndex news {date_from}__{date_to}.csv'
     if not driver:
         driver = webdriver.Firefox()
 
@@ -72,35 +74,74 @@ def parse_some_news(date_from : datetime.date, date_to : datetime.date, driver :
     continue_search = True
     checked_rounds = 0
 
-    while continue_search:
-        for post_card in posts_cards:
-            parsed_data, post_date = get_post_data(post_card)
-            date = datetime.date(post_date.year, post_date.month, post_date.day)
 
-            if date <= date_to and date >= date_from:
-                parsed_datas = pd.concat([parsed_datas, parsed_data], ignore_index = True)
+    if os.path.exists(csv_save_path):
+        loaded_df = pd.read_csv(csv_save_path).drop('Unnamed: 0', axis = 1)
+        parsed_datas = loaded_df.copy()
 
-            else:
-                continue_search = False
-                break
-            
+        find_id = str(loaded_df.loc[0].post_id)
+        post_id = None
 
-        checked_rounds += 1
+        while post_id != find_id:
+            for post_card in posts_cards:
+                parsed_data = get_post_data(post_card)
+                date = parsed_data.iloc[0].date
+                date = datetime.date(date.year, date.month, date.day)
 
-        next_button = driver.find_element(By.CLASS_NAME, 'mb-xl-0')
-        next_button.click()
+                post_id = str(parsed_data.iloc[0].post_id)
 
-        time.sleep(0.25)
+                if date <= date_to and date >= date_from and post_id != find_id:
+                    parsed_datas = pd.concat([parsed_datas, parsed_data], ignore_index = True)
 
-
-        posts_cards = driver.find_elements(By.CLASS_NAME, 'newsfeed__list-item')
-
-        posts_cards = posts_cards[16 * checked_rounds: ]
-
-    driver.close()
+                else:
+                    break
 
 
+            checked_rounds += 1
+
+            next_button = driver.find_element(By.CLASS_NAME, 'mb-xl-0')
+            next_button.click()
+
+            time.sleep(0.25)
+
+
+            posts_cards = driver.find_elements(By.CLASS_NAME, 'newsfeed__list-item')[16 * checked_rounds: ]
+
+        driver.close()
+        
+
+
+    else:
+        while continue_search:
+            for post_card in posts_cards:
+                parsed_data = get_post_data(post_card)
+                date = parsed_data.iloc[0].date
+                date = datetime.date(date.year, date.month, date.day)
+
+                if date <= date_to and date >= date_from:
+                    parsed_datas = pd.concat([parsed_datas, parsed_data], ignore_index = True)
+
+                else:
+                    continue_search = False
+                    break
+                
+
+            checked_rounds += 1
+
+            next_button = driver.find_element(By.CLASS_NAME, 'mb-xl-0')
+            next_button.click()
+
+            time.sleep(0.25)
+
+
+            posts_cards = driver.find_elements(By.CLASS_NAME, 'newsfeed__list-item')[16 * checked_rounds: ]
+
+
+        driver.close()
     
+    
+    parsed_datas.date = pd.to_datetime(parsed_datas.date)
+    parsed_datas.to_csv(csv_save_path)
     return(parsed_datas)
 
 
@@ -219,4 +260,3 @@ def get_data_from_url(url: str, days_from : str = "yesterday", days_to : str = "
     totals.update({'link' : url})
     # return response.json()
     return out, totals
-

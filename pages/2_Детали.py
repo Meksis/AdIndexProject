@@ -4,24 +4,40 @@ import plotly.express as px
 
 import datetime
 
-from Utils.parser_old import *
+from Utils.parser import *
 
 
-def refresh_datas(parse_days : int = 1):
-    datas = parse_some_news(days4parse=parse_days)
-    st.session_state['datas'] = datas
+def refresh_datas(date_from : datetime.date, date_to : datetime.date, csv_save_path : str):
+    st.session_state['datas'] = parse_some_news(date_from, date_to, csv_save_path)
 
-
-def refresh_metrics():
+def refresh_metrics(csv_save_path):
     datas = st.session_state['datas']
     datas_metrics = pd.DataFrame()
 
+    # if os.path.exists(csv_save_path):
+    #     loaded_df = pd.read_csv(csv_save_path, index_col=0)
+    #     differences = pd.merge(datas, loaded_df, 'left')
+    #     st.write(differences)
+
+
+    #     for link in differences.link:
+    #         datas_metrics = pd.concat([datas_metrics, pd.DataFrame([get_data_from_url(link)[1]])])
+
+
+    # else:
+    #     for link in datas.link:
+    #         datas_metrics = pd.concat([datas_metrics, pd.DataFrame([get_data_from_url(link)[1]])])
     
     for link in datas.link:
         datas_metrics = pd.concat([datas_metrics, pd.DataFrame([get_data_from_url(link)[1]])])
 
-    st.session_state['datas_full'] = datas.merge(datas_metrics, how='inner', on='link')
-    st.session_state['datas_full'].to_csv(f'AdIndex main news METRICS {datetime.datetime.today().strftime("%Y-%m-%d")}.csv')
+    
+    datas.date = pd.to_datetime(datas.date)
+    merged = pd.concat([datas.merge(datas_metrics, how='inner', on='link'), pd.DataFrame([{'Copyright' : None}])])
+    
+
+    st.session_state['datas_full'] = merged
+    st.session_state['datas_full'].to_csv(csv_save_path)
 
 
 if 'datas_full' not in st.session_state:
@@ -38,9 +54,13 @@ if 'datas_full' not in st.session_state:
             format="YYYY.MM.DD",
             key='datepick_details_page'
         )
-
-        refresh_datas((selected_date[1] - selected_date[0]).days)
-        refresh_metrics()
+        
+        try:
+            refresh_datas(selected_date[1], selected_date[0], f'./csvs/AdIndex news {selected_date[0]}__{selected_date[1]}.csv')
+            refresh_metrics(f'./csvs/AdIndex news metrics {selected_date[0]}__{selected_date[1]}.csv')
+        
+        except:
+            pass
 
 
 
@@ -64,12 +84,10 @@ if 'datas_full' not in st.session_state:
             st.session_state['picked_dates'] = selected_date
 
             with st.spinner('Получаем данные'):
-                refresh_datas((selected_date[1] - selected_date[0]).days)
-                refresh_metrics()
+                refresh_datas(selected_date[1], selected_date[0], f'./csvs/AdIndex news {selected_date[0]}__{selected_date[1]}.csv')
+                refresh_metrics(f'./csvs/AdIndex news metrics {selected_date[0]}__{selected_date[1]}.csv')
         
-            st.write(st.session_state['datas_full'])
-        # refresh_datas((st.session_state['picked_dates'][1] - st.session_state['picked_dates'][0]).days)
 
-else:
-    st.write(st.session_state['datas_full'])
+if 'datas_full' in st.session_state:
+    st.write(st.data_editor(st.session_state['datas_full'], disabled=st.session_state['datas_full'].columns[ : -1]))
     

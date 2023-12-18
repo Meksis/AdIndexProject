@@ -1,0 +1,1 @@
+streamlit run .\1_???????.py 8501 --theme.primaryColor "#B80D0B" --theme.backgroundColor "#011f49" --theme.secondaryBackgroundColor "#1b1b1b" --theme.textColor "#ffffff"

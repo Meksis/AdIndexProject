@@ -33,7 +33,7 @@ def refresh_metrics(csv_save_path):
 
     
     datas.date = pd.to_datetime(datas.date)
-    merged = pd.concat([datas.merge(datas_metrics, how='inner', on='link'), pd.DataFrame([{'Copyright' : None}])])
+    merged = pd.concat([datas.merge(datas_metrics, how='inner', on='link'), pd.DataFrame([{'Copywrite' : None}])])
     
 
     st.session_state['datas_full'] = merged

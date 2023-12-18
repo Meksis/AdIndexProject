@@ -100,25 +100,22 @@ if 'datas_full' in st.session_state:
     filtered_data = data[data['date'] <= pd.Timestamp(st.session_state['picked_dates'][1].strftime("%Y.%m.%d"))][data['date'] >= pd.Timestamp(st.session_state['picked_dates'][0].strftime("%Y.%m.%d"))]
 
     # Разделение экрана на три столбца
-    col1, _, col3 = st.columns(3)
+    col1, _, col3 = st.columns([0.4,0.1,.4])
 
 
 
     # График во втором столбце
 
     with col1:
-        with st.container(border=True):
+        with st.container():
             # Выпадающий список для выбора даты в первом столбце
             # selected_date_scatter = col1.selectbox('Выберите дату', [date.date() for date in date_list], key='scatter_selector')
                 # Фильтрация данных по выбранной дате
                 
-            try:
-                fig_line = px.bar(filtered_data, x='date', y='Посетители', title='Посещений за выбранный промежуток времени', hover_data=['author', 'post_tag', 'post_id'])
-                st.plotly_chart(fig_line)
             
-            except Exception as e:
-                print(e)
-
+            fig_tree = px.treemap(data, path=['post_tag','author'], title='Посещений за выбранный промежуток времени', )
+            st.plotly_chart(fig_tree)
+        
 
         
 
@@ -127,9 +124,9 @@ if 'datas_full' in st.session_state:
 
     # Круговая диаграмма в третьем столбце
     with col3:
-        selected_metric_diagram = col3.selectbox('Выберите метрику для сравнения', ['date', 'author', 'Посетители', 'Читатели'], key='metric_selector' )
+        selected_metric_diagram = col3.selectbox('Выберите метрику для сравнения', ['author', 'post_tag'], key='metric_selector' )
 
-        with st.container(border=True):
+        with st.container():
             # Сделать выбор промежутка по времени
             # selected_date_diagram = col3.selectbox('Выберите дату', date_list, key='diagram_selector')
             
@@ -143,3 +140,9 @@ if 'datas_full' in st.session_state:
             
             except Exception as e:
                 print(e)
+
+
+    with st.container(border=True):
+        fig_line = px.bar(filtered_data, x='date', y='Посетители', title='Посещений за выбранный промежуток времени', hover_data=['author', 'post_tag', 'post_id'])
+        st.plotly_chart(fig_line)
+            

@@ -4,7 +4,7 @@ import plotly.express as px
 
 import datetime
 
-from Utils.parser import *
+from Utils.parser_old import *
 
 
 def refresh_datas(parse_days : int = 1):

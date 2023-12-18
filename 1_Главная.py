@@ -4,9 +4,9 @@ import plotly.express as px
 
 import datetime
 
-from Utils.parser import *
+from Utils.parser_old import *
 st.set_page_config(layout="wide", initial_sidebar_state='collapsed') # установка широкого расположения объектов
-
+st.code(st.session_state)
 
 def refresh_datas(parse_days : int = 1):
     st.session_state['datas'] = parse_some_news(days4parse=parse_days)

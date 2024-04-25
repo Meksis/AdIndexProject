@@ -1,0 +1,39 @@
+{% extends 'stat_dashboard/base.html' %}
+
+
+{% block title %}
+Авторизация
+{% endblock %}
+
+
+{%block kostil_by_den4ik%}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+    
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }} 
+                <!-- <div class="mb-3">
+                    <label for="username" class="form-label">Почта / Имя пользователя</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Пароль</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div> -->
+                <button type="submit" class="btn btn-primary">Войти</button>
+                <button  class="btn btn-primary">Регистрация</button>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}

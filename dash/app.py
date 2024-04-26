@@ -20,6 +20,8 @@ app.layout = html.Div([
     dash.page_container
 ])
 
+
+
 # reload_btn = html.Button(
 #         'reload',
 #         '1',

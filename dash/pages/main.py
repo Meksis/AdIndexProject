@@ -5,7 +5,7 @@ from dash.dash_table import DataTable
 # import dash_html_components as html
 import pandas as pd
 
-dash.register_page(__name__)
+dash.register_page(__name__, path = '/main')
 
 # Создайте датафрейм Pandas
 df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', names=['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species'])
@@ -15,10 +15,10 @@ df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris
 
 # Определите layout
 layout = html.Div([
-    html.H1('Демонстрационная страница Dash'),
+    html.H1('Главная страница'),
     
     # Таблица
-    DataTable(data=df.to_dict('records')),
+    DataTable(data=df.to_dict('records'), page_size=10, editable=True),
     
     # График 1 - гистограмма площади лепестков
     dcc.Graph(

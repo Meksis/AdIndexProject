@@ -10,6 +10,16 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = Dash(__name__, external_stylesheets=external_stylesheets, use_pages=True, pages_folder='pages')
 
+app.layout = html.Div([
+    html.H3('Доступные страницы:'),
+    html.Div([
+        html.Div(
+            dcc.Link(f"{page['name']} - {page['path']}", href=page["relative_path"])
+        ) for page in dash.page_registry.values()
+    ]),
+    dash.page_container
+])
+
 # reload_btn = html.Button(
 #         'reload',
 #         '1',
@@ -89,22 +99,22 @@ app = Dash(__name__, external_stylesheets=external_stylesheets, use_pages=True, 
 #     df = pd.DataFrame(rows, columns=[c['name'] for c in columns])
 
 
-plot = dcc.Graph(
-    'graph'
-)
+# plot = dcc.Graph(
+#     'graph'
+# )
 
-app.layout = html.Div(
+# app.layout = html.Div(
     
-    style = {
-        'bgcolor': 'rgb(0, 0, 0)'
-    },
-    id = 'div1',
-    children = [
-    dash.page_container,
-    plot
-]
+#     style = {
+#         'bgcolor': 'rgb(0, 0, 0)'
+#     },
+#     id = 'div1',
+#     children = [
+#     dash.page_container,
+#     plot
+# ]
     
-)
+# )
 
 
 

@@ -27,11 +27,11 @@ layout = html.Div([
 
     
     # График 1 - гистограмма площади лепестков
-    dcc.Graph(
-        id='tree',
-        figure= px.treemap(df, path=['post_tag','author'], title='Посещений за выбранный промежуток времени', )
+    # dcc.Graph(
+    #     id='tree',
+    #     figure= px.treemap(df, path=['post_tag','author'], title='Посещений за выбранный промежуток времени', )
 
-    ),
+    # ),
     
     # # График 2 - рассеянный диаграмм Sepal Length vs Sepal Width
     # dcc.Graph(

@@ -6,7 +6,7 @@ from dash.dash_table import DataTable
 import plotly.express as px
 import pandas as pd
 
-dash.register_page(__name__, path = '/main')
+dash.register_page(__name__, path = '/main', name='сводка')
 
 # Создайте датафрейм Pandas
 df = pd.read_csv('csvs\AdIndex main news METRICS 2023-12-14.csv', index_col=0, parse_dates=True)

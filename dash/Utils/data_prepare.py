@@ -30,8 +30,26 @@ class Author:
             )
         grouped_teg['Автор'] = grouped_teg.index
         grouped_teg = grouped_teg[['Автор','Читателей','кол_во_статей','лучшая_тема']]
+
+        # print(grouped_teg)
         
         return grouped_teg
+    
+    def top_authors_df(self, df):
+        grouped_author = df.groupby('Автор').agg(
+        total_readers=pd.NamedAgg(column='Читатели', aggfunc='sum'),
+        total_posts=pd.NamedAgg(column='post_tag', aggfunc='count'),
+        avg_depth=pd.NamedAgg(column='Глубина просмотра', aggfunc='mean'),
+        best_topic=pd.NamedAgg(column='post_tag', aggfunc=lambda x: df.loc[x.index, 'Читатели'].idxmax())).reset_index()
+        grouped_author['best_topic'] = grouped_author['best_topic'].apply(lambda x: df.loc[x, 'post_tag'])
+
+        # print(grouped_author.columns)
+
+        grouped_author.columns = ['Автор', 'Количество просмотров', 'Количество статей', 'Глубина', 'Лучшая тема (По просмотрам)']
+
+        # print(grouped_author)
+        
+        return(grouped_author.sort_values(by='Количество просмотров', ascending=False))
     
     def bar_data(self, df, head):
         df = df.sort_values(by='Читатели', ascending=False)

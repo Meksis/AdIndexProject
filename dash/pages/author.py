@@ -13,9 +13,10 @@ dash.register_page(__name__, path = '/author')
 render_df = Author()
 
 # Создайте датафрейм Pandas
-df = pd.read_csv('csvs\AdIndex main news METRICS 2023-12-14.csv', index_col=0, parse_dates=True)
+df = pd.read_csv('csvs\AdIndex main news METRICS 2023-12-14.csv', index_col=0) 
 
-cl_df = render_df.page_df(df=df)
+# cl_df = render_df.page_df(df=df)
+top_authors_info = pd.DataFrame()
 
 # Создайте приложение Dash
 # app = dash.Dash(__name__)
@@ -23,7 +24,7 @@ cl_df = render_df.page_df(df=df)
 # Определите layout
 layout = html.Div([
     
-    html.H2('Рейтинг публикаций'),
+    html.H2('Рейтинг авторов'),
     html.P('Временной промежуток'),
     
     dcc.RadioItems(
@@ -37,7 +38,7 @@ layout = html.Div([
     html.P('Топ'),
     
     dcc.RadioItems(
-                [5, 10, 20,],
+                [5, 10, 20],
                 # 'Linear',
                 id='news-head',
                 value = 5,  
@@ -57,7 +58,7 @@ layout = html.Div([
     # Таблица
     DataTable(
                 id='main-table',
-                data=cl_df.to_dict('records'),
+                data=top_authors_info.to_dict('records'),
                 sort_action='native', 
                 editable=True,
                 # row_selectable="single",
@@ -71,10 +72,21 @@ layout = html.Div([
 
 @callback(
     Output('bar-author', 'figure'),
+    Output('main-table', 'data'),
     Input('news-head','value'),
 )
 def update_figure(head):
-    fig = px.bar(render_df.bar_data(df,head), x='Автор', y='Читатели', title='Рейтинг публикаций', 
+
+    # fig = px.bar(render_df.bar_data(df,head), x='Автор', y='Читатели', title='Рейтинг публикаций', 
+    #         width=1200, height=550)
+    # print(df.head(head))
+    # print(df.columns)
+
+    print(head)
+
+    top_authors_info = Author().top_authors_df(df).iloc[:head]
+
+    fig = px.bar(top_authors_info, x='Автор', y='Количество просмотров', title='Рейтинг публикаций', 
             width=1200, height=550)
     
-    return fig
+    return fig, top_authors_info.to_dict('records')

@@ -46,7 +46,7 @@ layout = html.Div([
             ),
     
     dcc.Graph(
-        id='bar-pub',
+        id='bar-top',
         # figure= px.bar(render_df.bar_data(df,5), x='post_id', y='Читатели', title='Рейтинг публикаций', 
         #     width=1400, height=800)
 
@@ -70,11 +70,11 @@ layout = html.Div([
 
 
 @callback(
-    Output('bar-pub', 'figure'),
+    Output('bar-top', 'figure'),
     Input('news-head','value'),
 )
 def update_figure(head):
-    fig = px.bar(render_df.bar_data(df,head), x='post_tag', y='Читатели', title='Рейтинг публикаций', 
+    fig = px.bar(render_df.bar_data(df,head), x='post_id', y='Читатели', title='Рейтинг публикаций', 
             width=1200, height=550)
     
     return fig

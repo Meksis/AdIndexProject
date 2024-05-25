@@ -39,7 +39,7 @@ layout = html.Div([
     dcc.RadioItems(
                 [5, 10, 20,],
                 # 'Linear',
-                id='author-head',
+                id='news-head',
                 value = 5,  
 
                 inline=True
@@ -71,7 +71,7 @@ layout = html.Div([
 
 @callback(
     Output('bar-author', 'figure'),
-    Input('author-head','value'),
+    Input('news-head','value'),
 )
 def update_figure(head):
     fig = px.bar(render_df.bar_data(df,head), x='Автор', y='Читатели', title='Рейтинг публикаций', 

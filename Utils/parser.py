@@ -31,6 +31,7 @@ authors_names = [
 
 def get_post_data(post_card_object):
     link = post_card_object.find_element(By.CLASS_NAME, 'newsfeed__list-item-title').find_element(By.TAG_NAME, 'a').get_attribute('href')
+    post_name = post_card_object.find_element(By.CLASS_NAME, 'newsfeed__list-item-title').text
 
     footer_object = post_card_object.find_element(By.CLASS_NAME, 'newsfeed__list-footer')
     tag = footer_object.find_element(By.TAG_NAME, 'a').text
@@ -39,6 +40,8 @@ def get_post_data(post_card_object):
     time = publication_datas[1] if len(publication_datas[0]) > len(publication_datas[1]) else publication_datas[0]
 
     publicated_at = parser(f'{date} {time}', dayfirst=True)
+
+    # print(publicated_at)
 
     del time, publication_datas, footer_object
 
@@ -50,6 +53,7 @@ def get_post_data(post_card_object):
                 {
                 'date' : publicated_at,
                 'author' : random.choice(authors_names),        # Заглушка
+                'post_name' : post_name,
                 'post_tag' : tag,
                 'post_id' : id,
                 'link' : link
@@ -60,9 +64,9 @@ def get_post_data(post_card_object):
     )
 
 
-def parse_some_news(date_from : datetime.date, date_to : datetime.date, driver : webdriver.Firefox = None) -> pd.DataFrame:
+def parse_some_news(date_from : datetime.date, date_to : datetime.date, driver : webdriver.Chrome = None) -> pd.DataFrame:
     if not driver:
-        driver = webdriver.Firefox()
+        driver = webdriver.Chrome()
 
     driver.get(main_url)
 
@@ -73,29 +77,27 @@ def parse_some_news(date_from : datetime.date, date_to : datetime.date, driver :
     checked_rounds = 0
 
     while continue_search:
-        for post_card in posts_cards:
-            parsed_data, post_date = get_post_data(post_card)
-            date = datetime.date(post_date.year, post_date.month, post_date.day)
+        posts_cards = driver.find_elements(By.CLASS_NAME, 'newsfeed__list-item')
 
-            if date <= date_to and date >= date_from:
+        for post_data in posts_cards[checked_rounds * 16 :]:
+            parsed_data, post_date = get_post_data(post_data)
+            post_date = datetime.date(post_date.year, post_date.month, post_date.day)
+            
+            if post_date <= date_to and post_date >= date_from:
                 parsed_datas = pd.concat([parsed_datas, parsed_data], ignore_index = True)
 
             else:
                 continue_search = False
                 break
-            
+
 
         checked_rounds += 1
 
         next_button = driver.find_element(By.CLASS_NAME, 'mb-xl-0')
         next_button.click()
 
-        time.sleep(0.25)
+        time.sleep(1)       # Чтобы успевали подгрузиться новости
 
-
-        posts_cards = driver.find_elements(By.CLASS_NAME, 'newsfeed__list-item')
-
-        posts_cards = posts_cards[16 * checked_rounds: ]
 
     driver.close()
 
@@ -123,7 +125,8 @@ def get_data_from_url(url: str, days_from : str = "yesterday", days_to : str = "
 
 
     headers = {
-        'Authorization': 'OAuth y0_AgAAAABxT5u9AArjtwAAAADzHTIKv-VGe5uzTHqKqd3WWTTeIiZQ2WU',
+        # 'Authorization': 'OAuth y0_AgAAAABxT5u9AArjtwAAAADzHTIKv-VGe5uzTHqKqd3WWTTeIiZQ2WU',
+        'Authorization': 'OAuth y0_AgAAAABxT5u9AArjtwAAAAEF76JkAACyj6gBOhNAkqhvgQqQ8cXYqh1BlA',
     }
 
     response = requests.get(api_url, headers=headers, params=params ).json()
@@ -219,4 +222,3 @@ def get_data_from_url(url: str, days_from : str = "yesterday", days_to : str = "
     totals.update({'link' : url})
     # return response.json()
     return out, totals
-

@@ -96,7 +96,7 @@ def parse_some_news(date_from : datetime.date, date_to : datetime.date, driver :
         next_button = driver.find_element(By.CLASS_NAME, 'mb-xl-0')
         next_button.click()
 
-        time.sleep(1)       # Чтобы успевали подгрузиться новости
+        time.sleep(5)       # Чтобы успевали подгрузиться новости
 
 
     driver.close()
@@ -109,17 +109,57 @@ def parse_some_news(date_from : datetime.date, date_to : datetime.date, driver :
 
 
 
-def get_data_from_url(url: str, days_from : str = "yesterday", days_to : str = "today"):
+def get_data_from_url(url: str, date_from: datetime.date, date_to: datetime.date):
+# def get_data_from_url(url: str, days_from : str = "yesterday", days_to : str = "today"):
+
     params = {
         'ids': '22386646',
         # 'metrics': 'ym:s:visits,ym:s:pageviews,ym:s:users,ym:s:bounceRate,ym:s:pageDepth,ym:s:avgVisitDurationSeconds',
         # 'metrics': 'ym:s:pageviews',  # Метрика для просмотров страниц
         'metrics': 'ym:s:visits,ym:s:pageviews,ym:s:users,ym:s:bounceRate,ym:s:pageDepth,ym:s:avgVisitDurationSeconds',
         'dimensions': 'ym:s:refererDomain',  # Размерность для получения ссылок
-        'date1': days_from,  # 7daysAgo за неделю, 30daysAgo за месяц, 365daysAgo за год
-        'date2': days_to,
+        'date1': date_from,  # 7daysAgo за неделю, 30daysAgo за месяц, 365daysAgo за год
+        'date2': date_to,
         'filters': f"ym:pv:URL=='{url}'"
     }
+
+    dates_delta = abs((date_to - date_from).days)
+    # print(f'Дельта 1 - {dates_delta}')
+
+
+    if dates_delta == 1:
+        params['date1'] = f'yesterday'
+        # print(f'{dates_delta}dayAgo')
+
+    elif dates_delta > 1:
+        params['date1'] = f'{dates_delta}daysAgo'
+
+        # print(f'{dates_delta}daysAgo')
+
+    
+    dates_delta = abs((datetime.date.today() - date_to).days)
+    # print(f'Дельта 2 - {dates_delta}')
+
+
+    if dates_delta == 0:
+        params['date2'] = 'today'
+    
+    elif dates_delta == 1:
+        params['date2'] = 'yesterday'
+    
+    elif dates_delta > 1:
+        params['date2'] = f'{dates_delta}daysAgo'
+    
+    else:
+        print('[!!!] Не долдны были здесь быть - трабла с датами.')
+
+
+
+    
+    # params['date2'] = 'today'
+
+
+    
 
     api_url = 'https://api-metrika.yandex.net/stat/v1/data'
 
@@ -130,6 +170,8 @@ def get_data_from_url(url: str, days_from : str = "yesterday", days_to : str = "
     }
 
     response = requests.get(api_url, headers=headers, params=params ).json()
+
+    # print(response)
 
     if not response['data']:
         return response, url

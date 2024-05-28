@@ -23,7 +23,7 @@ cl_df = render_df.page_df(df=df)
 # Определите layout
 layout = html.Div([
     
-    html.H2('Рейтинг публикаций'),
+    html.H2('Рейтинг Авторов'),
     html.P('Временной промежуток'),
     
     dcc.RadioItems(
@@ -74,7 +74,7 @@ layout = html.Div([
     Input('author-head','value'),
 )
 def update_figure(head):
-    fig = px.bar(render_df.bar_data(df,head), x='Автор', y='Читатели', title='Рейтинг публикаций', 
+    fig = px.bar(render_df.bar_data(df,head), x='Автор', y='Читатели', title='Рейтинг авторов', 
             width=1200, height=550)
     
     return fig

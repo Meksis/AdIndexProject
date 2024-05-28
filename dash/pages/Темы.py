@@ -33,7 +33,7 @@ df = render_df.page_df(df=df)
 # Определите layout
 layout = html.Div([
     
-    html.H2('Рейтинг публикаций'),
+    html.H2('Рейтинг тематик'),
     html.P('Временной промежуток'),
     
     dcc.RadioItems(
@@ -90,7 +90,7 @@ layout = html.Div([
     Input('theme-head','value'),
 )
 def update_themes_chart(head):
-    fig = px.bar(render_df.bar_data(df,head), x='Тема', y='Читатели', title='Рейтинг публикаций', 
+    fig = px.bar(render_df.bar_data(df,head), x='Тема', y='Читатели', title='Рейтинг тематики', 
             width=1200, height=550)
     
     return fig

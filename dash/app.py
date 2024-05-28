@@ -11,10 +11,10 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = Dash(__name__, external_stylesheets=external_stylesheets, use_pages=True, pages_folder='pages')
 
 app.layout = html.Div([
-    html.H3('Доступные страницы:'),
+    html.H4('Доступные страницы:'),
     html.Div([
         html.Div(
-            dcc.Link(f"{page['name']} - {page['path']}", href=page["relative_path"])
+            dcc.Link(f"{page['name']}", href=page["relative_path"])
         ) for page in dash.page_registry.values()
     ]),
     dash.page_container

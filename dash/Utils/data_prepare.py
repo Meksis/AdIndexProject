@@ -3,16 +3,18 @@ import pandas as pd
 class Publication:
 
     def page_df(self, df):
-        cl_df = df[['post_id','Ссылка','Автор','date','Читатели','Глубина просмотра']]
         df['post_id'] = df['post_id'].astype(str)
-        cl_df['трафик с ТГ']= 0
-        cl_df['трафик с ВК']= 0
-        cl_df['трафик с home']= 0
+        cl_df = df[['Название','Ссылка','Автор','date','Читатели','Глубина просмотра']]
+        # cl_df['трафик с ТГ']= 0
+        # cl_df['трафик с ВК']= 0
+        # cl_df['трафик с home']= 0
 
+        cl_df = cl_df.sort_values(by='Читатели', ascending=False)
         return cl_df
 
     def bar_data(self, df, head):
         df = df.sort_values(by='Читатели', ascending=False)
+
         return df.head(head)
 
 class Author:
@@ -40,20 +42,20 @@ class Author:
         total_readers=pd.NamedAgg(column='Читатели', aggfunc='sum'),
         total_posts=pd.NamedAgg(column='post_tag', aggfunc='count'),
         avg_depth=pd.NamedAgg(column='Глубина просмотра', aggfunc='mean'),
-        best_topic=pd.NamedAgg(column='post_tag', aggfunc=lambda x: df.loc[x.index, 'Читатели'].idxmax())).reset_index()
-        grouped_author['best_topic'] = grouped_author['best_topic'].apply(lambda x: df.loc[x, 'post_tag'])
-
+        best_topic=pd.NamedAgg(column='post_tag', aggfunc=self.f))
+        # grouped_author['best_topic'] = grouped_author['best_topic'].apply(lambda x: df.loc[x, 'post_tag'])
+        grouped_author.reset_index(inplace=True)
         # print(grouped_author.columns)
 
-        grouped_author.columns = ['Автор', 'Количество просмотров', 'Количество статей', 'Глубина', 'Лучшая тема (По просмотрам)']
+        grouped_author.columns = ['Автор', 'Количество просмотров', 'Количество статей', 'Глубина', 'Лучшая тема']
 
         # print(grouped_author)
 
         return(grouped_author.sort_values(by='Количество просмотров', ascending=False))
 
-    def bar_data(self, df, head):
+    def bar_data(self, df,):
         df = df.sort_values(by='Читатели', ascending=False)
-        return df.iloc[:head]
+        return df
     
 
 class Theme:

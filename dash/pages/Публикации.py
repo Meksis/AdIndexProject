@@ -5,15 +5,15 @@ from dash.dash_table import DataTable
 # import dash_html_components as html
 import plotly.express as px
 import pandas as pd
-
+import dash_bootstrap_components as dbc
 from Utils.data_prepare import Publication
 
-dash.register_page(__name__, path = '/news')
+dash.register_page(__name__, path = '/news',external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 render_df = Publication()
 
 # Создайте датафрейм Pandas
-df = pd.read_csv('csvs\AdIndex main news METRICS 2023-12-14.csv', index_col=0, parse_dates=True)
+df = pd.read_csv('csvs\AdIndex_24_05-1_28_Metrics.csv', index_col=0, parse_dates=True)
 
 cl_df = render_df.page_df(df=df)
 
@@ -24,23 +24,23 @@ cl_df = render_df.page_df(df=df)
 layout = html.Div([
     
     html.H2('Рейтинг публикаций'),
-    html.P('Временной промежуток'),
+    # html.P('Временной промежуток'),
     
-    dcc.RadioItems(
-                ['3 Дня', '7 Дней', '30 Дней',],
-                # 'Linear',
-                value = '3 Дня',  
-                id ='date-select',
-                inline =True
-            ),
+    # dbc.RadioItems(
+    #             ['3 Дня', '7 Дней', '30 Дней',],
+    #             # 'Linear',
+    #             value = '3 Дня',  
+    #             id ='date-select',
+    #             inline =True
+    #         ),
     
     html.P('Топ'),
     
-    dcc.RadioItems(
-                [5, 10, 20,],
+    dbc.RadioItems(
+                [ 10, 30, 50],
                 # 'Linear',
                 id='news-head',
-                value = 5,  
+                value = 10,  
 
                 inline=True
             ),
@@ -63,7 +63,7 @@ layout = html.Div([
                 # row_selectable="single",
                 # filter_action='native',
                 # row_deletable=True,
-                page_size=10, 
+                page_size=20, 
     
             ),
 ])
@@ -74,7 +74,7 @@ layout = html.Div([
     Input('news-head','value'),
 )
 def update_figure(head):
-    fig = px.bar(render_df.bar_data(df,head), x='post_id', y='Читатели', title='Рейтинг публикаций', 
-            width=1200, height=550)
+    fig = px.bar(render_df.bar_data(df,head), x='Название', y='Читатели', title='Рейтинг публикаций', 
+            width=2100, height=1100)
     
     return fig

@@ -13,17 +13,9 @@ dash.register_page(__name__, path = '/theme')
 render_df = Theme()
 
 # Создайте датафрейм Pandas
-df = pd.read_csv('csvs\AdIndex main news METRICS 2023-12-14.csv', index_col=0, parse_dates=True)
+df = pd.read_csv('csvs\AdIndex_24_05-1_28_Metrics.csv', index_col=0, parse_dates=True)
 
 df = render_df.page_df(df=df)
-
-
-
-
-
-
-
-
 
 
 
@@ -104,7 +96,8 @@ def update_themes_chart(head):
 def update_themes_best_authors(head):
 
     sum_read = df.groupby('лучший_автор')['Читатели'].sum().reset_index()
-    sum_read.sort_values(by='Читатели', ascending=False, inplace=True)
+    sum_read=sum_read.sort_values(by='Читатели', ascending=False,).head(head)
+
     best_topic_author = px.bar(sum_read, x='лучший_автор', y='Читатели', title='Топ авторов во всех темах', 
                 width=1400, height=800)
                 # width=1400, height=800, hover_data=['Тема', 'лучший_автор', "Читатели"])

@@ -1,4 +1,4 @@
-from dash import Dash, dcc, html, Input, Output, callback
+from dash import Dash, dcc, html, Input, State, Output, callback
 import dash
 from dash.dash_table import DataTable
 # import dash_core_components as dcc
@@ -52,6 +52,26 @@ layout = html.Div([
     ),
     
 
+     dbc.Button(
+            "?",
+            id="collapse-button",
+            className="mb-3",
+            color="primary",
+            n_clicks=0,
+        ),
+
+        dbc.Collapse(
+            dbc.Card([
+                html.H4('Описание столбцов таблицы'),
+                dbc.CardBody('Автор - ФИО автора'),
+                dbc.CardBody('количество просмотров - сумарное количество просмотров публикаций.'),
+                dbc.CardBody('Количество статей - Количество статей, опубликованных автором.'),
+                dbc.CardBody('Глубина - Среднее количество страниц(на сайте adindex) посейщеных после перехода на страницу статьи.'),
+                dbc.CardBody('Лучшая тема - тема по которой было написано наибольшее количество статьей.'),
+                ]),
+            id="collapse-author",
+            is_open=False,
+        ),
 
     # Таблица
     DataTable(
@@ -77,3 +97,13 @@ layout = html.Div([
 #             width=1500, height=600)
     
 #     return fig
+
+@callback(
+    Output('collapse-author', "is_open"),
+    [Input("collapse-button", "n_clicks")],
+    [State('collapse-author', "is_open")],
+)
+def toggle_collapse(n, is_open):
+    if n:
+        return not is_open
+    return is_open

@@ -1,4 +1,4 @@
-from dash import Dash, dcc, html, Input, Output, callback
+from dash import Dash, dcc, html, Input,State, Output, callback
 import dash
 import dash_bootstrap_components as dbc
 from dash import html
@@ -93,9 +93,31 @@ layout = html.Div([
     
     html.Div([
         dcc.Graph(
-            figure=px.bar(cdf, x=cdf.Автор, y='Читатели', title='Рейтинг публикаций', width=1000, height=650)
+            figure=px.bar(cdf, x=cdf.Автор, y='Читатели', title='Рейтинг авторов', width=1000, height=650)
         )
-    ], style=content_style)
+    ], style=content_style),
+         
+    dbc.Button(
+            "?",
+            id="collapse-button",
+            className="mb-3",
+            color="primary",
+            n_clicks=0,
+            
+        ),
+
+        dbc.Collapse(
+            dbc.Card([
+                html.H4('Описание столбцов таблицы'),
+                dbc.CardBody('Тема	Название темы, по которой публикуются статьи'),
+                dbc.CardBody('Читатели	Количество подписчиков на тему'),
+                dbc.CardBody('Кол во статей	Количество статей, опубликованных по теме'),
+                dbc.CardBody('Лучший автор	Автор, опубликовавший наибольшее количество статей по теме'),
+                ]),
+            id="collapse-adindex",
+            is_open=False,
+        ),
+
 ])
 
 # Добавляем CSS для ссылок при наведении
@@ -123,3 +145,15 @@ index_string = '''
     </body>
 </html>
 '''
+
+
+
+@callback(
+    Output("collapse-adindex", "is_open"),
+    [Input("collapse-button", "n_clicks")],
+    [State("collapse-adindex", "is_open")],
+)
+def toggle_collapse(n, is_open):
+    if n:
+        return not is_open
+    return is_open

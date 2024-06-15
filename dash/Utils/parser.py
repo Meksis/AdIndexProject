@@ -1,5 +1,8 @@
 import selenium.webdriver as webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+
+import sqlite3 as sq
 
 import pandas as pd
 import random
@@ -51,7 +54,7 @@ def get_post_data(post_card_object, driver):
     driver.switch_to.window(driver.window_handles[-1])
     driver.get(link)
 
-    author_name = driver.find_element(By.NAME, 'article-author').text
+    author_name = driver.find_element(By.NAME, 'article-author').get_attribute('content')
 
     driver.close()
     driver.switch_to.window(driver.window_handles[-1])
@@ -77,7 +80,13 @@ def get_post_data(post_card_object, driver):
 
 def parse_some_news(date_from : datetime.date, date_to : datetime.date, driver : webdriver.Chrome = None, next_page_delay: float = 1) -> pd.DataFrame:
     if not driver:
-        driver = webdriver.Chrome()
+        # Оч долго грузятся страницы. Для просмотра автора требуется посеитить страницу статьи, а они могут оч долго грузиться. 
+        # Выход - не дожидаться полной загрузки страницы, а сразу же пытаться получить данные.
+
+        option = Options()
+        option.set_capability("pageLoadStrategy","eager")
+
+        driver = webdriver.Chrome(options=option)
 
     driver.get(main_url)
 

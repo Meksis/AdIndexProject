@@ -13,7 +13,7 @@ dash.register_page(__name__, path = '/theme',external_stylesheets=[dbc.themes.BO
 render_df = Theme()
 
 # Создайте датафрейм Pandas
-df = pd.read_csv('csvs\AdIndex_24_05-1_28_Metrics.csv', index_col=0, parse_dates=True)
+df = pd.read_csv('./csvs/AdIndex_24_05-1_28_Metrics.csv', index_col=0, parse_dates=True)
 
 df = render_df.page_df(df=df)
 

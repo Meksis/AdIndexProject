@@ -13,7 +13,7 @@ dash.register_page(__name__, path = '/author')
 render_df = Author()
 
 # Создайте датафрейм Pandas
-df = pd.read_csv('csvs\AdIndex_24_05-1_28_Metrics.csv', index_col=0, parse_dates=True)
+df = pd.read_csv('./csvs/AdIndex_24_05-1_28_Metrics.csv', index_col=0, parse_dates=True)
 
 cl_df = render_df.top_authors_df(df=df)
 

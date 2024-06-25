@@ -7,13 +7,17 @@ import plotly.express as px
 import pandas as pd
 import dash_bootstrap_components as dbc
 from Utils.data_prepare import Publication
+import os
 
 dash.register_page(__name__, path = '/news',external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 render_df = Publication()
 
+
+# print(os.listdir('./'))
+print(os.listdir('csvs'))
 # Создайте датафрейм Pandas
-df = pd.read_csv('csvs\AdIndex_24_05-1_28_Metrics.csv', index_col=0, parse_dates=True)
+df = pd.read_csv('./csvs/AdIndex_24_05-1_28_Metrics.csv', index_col=0, parse_dates=True)
 
 cl_df = render_df.page_df(df=df)
 

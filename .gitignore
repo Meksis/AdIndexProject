@@ -1,4 +1,5 @@
 __pycache__/
 env
 *.txt
-
+*/venv
+adindex_docker_image.tar

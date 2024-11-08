@@ -8,7 +8,7 @@ import pandas as pd
 from Utils.data_prepare import Publication
 
 
-dash.register_page(__name__, path='/' ,external_stylesheets=[dbc.themes.BOOTSTRAP], )
+dash.register_page(__name__, path='/' ,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 render_df = Publication()
 
